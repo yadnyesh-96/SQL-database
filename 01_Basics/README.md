@@ -32,7 +32,9 @@ Database is the <b>technique</b> where we can <b>Organize or Store</b> the data 
 
 > **How many types of databases ?**
 
-<or>1. `Realtional Databse` : 
+1. `Realtional Databse` : 
 <br>Relational database means a database can orgainize or store data in the form of tables in row and column format.
-    
+<br>
+2. `Hierarchical database` :
+<br>
 
