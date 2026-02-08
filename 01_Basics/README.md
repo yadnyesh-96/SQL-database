@@ -66,7 +66,7 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
 - MYSQL - is tool reponsible for provide environment to work with relational database.
 - SQL - It is Programming Language work with relational database management concept.
 - Database - Database is concept or it is technique where we can Orgainize or store our data called as database.
-
+---
 > <b>What is the Database in RDBMS?</b>
 <br>Collection of tables called database.
 1. Create Database:
@@ -84,6 +84,7 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
     ``` 
 
       ![alt text](image-3.png)
+      ---
     once we create database we can work with database and for that we have following commands to work with user database:
     - A. <b>DDL</b>
     - B. <b>DML</b>
