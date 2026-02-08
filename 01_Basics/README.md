@@ -17,5 +17,10 @@ Database is the <b>technique</b> where we can <b>Organize or Store</b> the data 
 - **Data Integration :** We can easily integrated data with other application by maintaining centralized database.
 <br>
 <br>
-- **Avoid Redundancy of data :**  
+- **Avoid Redundancy of data :**  With the help of database we can avoid the duplication of data from database by using the normalization technique if we think about the RBMS (Relational Database Mangament System).
+<br>
+<br>
+- **Data Orgainization** : DBMS can provide the systematice approach to Organize data internall structure wat the benefit is user can easily understand data and can easily retrieve or perform operation on database.
+<br>
+<br>
 
