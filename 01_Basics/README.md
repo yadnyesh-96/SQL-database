@@ -33,5 +33,18 @@ Database is the <b>technique</b> where we can <b>Organize or Store</b> the data 
 <br>Relational database means a database can orgainize or store data in the form of tables in row and column format.
 
 2. `Hierarchical database` :
+<br>The database can manage data in the tree structur/format form of parent and child relationship called as Hierarchical database.
+if we thinking the file system of operating system it is example of hirarchical database.
 
+3. `Object Oriented database` :  
+<br>Database can store in the form of object attribute and values called as object oriented database.
+<br>Example of object Oriented database in MongoDB:
+
+4. `Cloud database `:
+<br>Database which is not present on user machine and accessible and modified by cloud.
+
+5. `Distributed database`:
+<br>Distributed database means we have multiple databases present on remote location and communicating with each other called a distributed database.
+
+----
 
