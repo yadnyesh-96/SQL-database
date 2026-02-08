@@ -50,3 +50,43 @@ if we thinking the file system of operating system it is example of hirarchical 
 
 ----
 
+Now we want to work with Relational database management or RDBMS<br>
+if we want to work with RDBMS we have multiple tools vendors <b>eg., MYSQL, Oracle, DB2, PostgreeSQL.</b><br>
+Now we Work with MYSQL
+
+---
+
+
+> <b>What is MYSQL ?</b>
+<br>
+MYSQL is a database tool wich provides an environment for us to work with Relational Database Management Systems (RDBMS).
+<br>
+---
+> <b>What is the difference between MYSQL, SQL and database?</b>
+- MYSQL - is tool reponsible for provide environment to work with relational database.
+- SQL - It is Programming Language work with relational database management concept.
+- Database - Database is concept or it is technique where we can Orgainize or store our data called as database.
+
+> <b>What is the Database in RDBMS?</b>
+<br>Collection of tables called database.
+1. Create Database:
+    ```sql
+    create database july2025;
+    ```
+
+2. Show the Database:
+    ```sql
+    show databases;
+    ```
+3. Use database:
+    ```sql
+    use july2025;
+    ``` 
+
+      ![alt text](image-3.png)
+    once we create database we can work with database and for that we have following commands to work with user database:
+    - A. <b>DDL</b>
+    - B. <b>DML</b>
+    - C. <b>DQL</b> 
+    - D. <b>TCL</b>
+    - E. <b>DCL</b>
