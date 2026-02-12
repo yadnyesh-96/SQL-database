@@ -236,15 +236,17 @@ update student set std_address = 'Mumbai' where std_Id=2;
      >1. **Partial select** : We can retrive specific column data from table called as **Partial select**.<br>
      **Syntax** : select column1, column2,...column...n from tablename; <br>
      ```
-    
+    select std_Id, std_address from student;
      ``` 
+     ![alt text](image-20.png)
+---
 
 
 
 
 
 
-## 🗑️ SQL: DELETE vs TRUNCATE vs DROP
+### 🗑️ SQL: DELETE vs TRUNCATE vs DROP
 
 A beginner-friendly guide to understand the differences between `DELETE`, `TRUNCATE`, and `DROP` in SQL.
 
