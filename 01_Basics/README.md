@@ -95,7 +95,7 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
 ---
 
 
-> A. DDL : Data Definition Language. <br>
+> A. **DDL** : Data Definition Language. <br>
 
 - Basically Data definition Language it is used to for **create table, procedure, trigger, function, view database, as well as drop & alter database table,etc.**
 - DDL command works with **table structure**.
@@ -166,3 +166,12 @@ alter table student rename column std_name to std_nm;
 ```
 drop table student
 ```
+![alt text](image-11.png)
+---
+5. **truncate**: This statement is used in database to delete the table data. <br>
+**Syntax** : truncate tablename;
+```
+truncate tablename;
+```
+![alt text](image-12.png)
+---
