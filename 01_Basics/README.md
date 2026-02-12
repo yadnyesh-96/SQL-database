@@ -228,6 +228,19 @@ update student set std_address = 'Mumbai' where std_Id=2;
 ```
 ![alt text](image-18.png)
 ---
+> B. **DQL** : Data Query Language. <br>
+- Basically the Data Query Language (DQL) is used for to fetch or retrive data from database tables.
+- **There are two types of Insert commands** :
+     >1. **Wild card select** : Wild card select is denoted by *means we fetch or retrive data from all rows with all columns.
+     ![alt text](image-19.png)
+     >1. **Partial select** : We can retrive specific column data from table called as **Partial select**.<br>
+     **Syntax** : select column1, column2,...column...n from tablename; <br>
+     ```
+    
+     ``` 
+
+
+
 
 
 
