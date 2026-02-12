@@ -91,3 +91,18 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
     - C. <b>DQL</b> 
     - D. <b>TCL</b>
     - E. <b>DCL</b>
+
+---
+
+
+> A. DDL : Data Definition Language. <br>
+
+- Basically Data definition Language it is used to for **create table, procedure, trigger, function, view database, as well as drop & alter database table,etc.**
+- DDL command works with **table structure**.
+1. Create : It is used for create table, create database, create procedure etc.<br>
+**Sysntax** : create database database_name; <br>
+**ex.** 
+```
+create database july2025;
+```
+![alt text](image-4.png)
