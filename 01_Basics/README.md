@@ -175,3 +175,183 @@ truncate tablename;
 ```
 ![alt text](image-12.png)
 ---
+> B. **DML** : Data Manipulation Language. <br>
+- Data manipulation langauge is work with a table data.
+- Basically Data Manipulation Language is used to **Insert** , **Update** and **delete** data in database table.
+---
+-   1. **Insert** : Iset is used used for inserting the data in the database table. <br>
+     - **There are two types of Insert commands** :
+     >1. **Wild card insert** : wild card insert means we can isert **all column data** or **provide value to all column** in **row** called as wild card insert. <br>
+     **Example :** Suppose we have student table with three field *std_Id* , *std_name* and *std_address* and we want to store data in that. 
+     ```
+    insert into student values(1,'Aditya','Pune');
+     ```
+     ![alt text](image-13.png)
+     >2. **Partial insert** : partial insert means we can provide value to a specific column in row called **_Partial insert_**.<br>
+     **Syntax** : insert into tablename (column1,column,column...n) values(value1,value2,va;ue...n);<br>
+     **example** : suppose cansider we have student table with three column *std_Id* , *std_name* and *std_address* but we want to provide value to *std_Id* and *std_name* only not to *std_address*.
+     ```
+     insert into student (std_Id,std_name)values(5,'Yash');
+     ```
+     ![alt text](image-14.png)
+---
+-   2. **Delete** : delete data from database table or data from table. <br>
+    - **There are two types of Insert commands** :
+     >1. **Wild card delete** : delete all record from table. <br>
+     **Syntax** : delete from tablename; <br>
+     **example** : delete from student; : delete all records from table.
+     ```
+    delete from student;
+     ```
+    ![alt text](image-16.png)
+
+     >2. **Partial delete** : We can achive using *WHERE* consdition means we can delete specific records by using condition. <br>
+     **Syntax** : delete from tablename where condition; <br>
+     **example** : delete from student where std_Id=6;: delete all records from table.
+     ```
+    delete from student where std_Id=6;
+     ```
+    ![alt text](image-15.png)
+---
+-   2. **Update** : update is it used for modify the column data. <br>
+**Syntax** : update tablename set columnname = value; :update all data in column using every row.
+```
+update student set std_address = 'Pune';
+```
+![alt text](image-17.png)
+---
+We can update specific row or update specific column using condition where clause.<br>
+**Example**
+
+
+
+## 🗑️ SQL: DELETE vs TRUNCATE vs DROP
+
+A beginner-friendly guide to understand the differences between `DELETE`, `TRUNCATE`, and `DROP` in SQL.
+
+---
+
+### 🔹 1. DELETE
+
+ **➤ What it does**
+Removes **selected rows (data)** from a table.<br>
+**➤ Works on**
+- ✅ Table rows (data)
+- ❌ Entire database <br>
+
+**➤ Syntax**
+```sql
+DELETE FROM table_name WHERE condition;
+````
+
+**➤ Key Points**
+
+* Can delete **specific rows** using `WHERE`
+* Table **structure remains**
+* Slower (row-by-row deletion)
+* Can be **rolled back** (inside transactions)
+
+**➤ Example**
+
+```sql
+DELETE FROM employees WHERE id = 5;
+```
+
+---
+
+### 🔹 2. TRUNCATE
+
+**➤ What it does**
+
+Removes **all rows** from a table quickly.<br>
+
+**➤ Works on**
+
+* ✅ Whole table data
+* ❌ Entire database
+
+**➤ Syntax**
+
+```sql
+TRUNCATE TABLE table_name;
+```
+
+**➤ Key Points**
+
+* Deletes **all rows only** (no `WHERE`)
+* Table **structure remains**
+* Very fast (minimal logging)
+* Resets `AUTO_INCREMENT`
+* Usually **cannot rollback**
+
+**➤ Example**
+
+```sql
+TRUNCATE TABLE employees;
+```
+
+---
+
+### 🔹 3. DROP
+
+**➤ What it does**
+
+Deletes the **entire object** (table or database).
+
+**➤ Works on**
+
+* ✅ Table
+* ✅ Database
+
+**➤ Syntax**
+
+```sql
+DROP TABLE table_name;
+DROP DATABASE database_name;
+```
+
+**➤ Key Points**
+
+* Deletes **structure + data**
+* Object **no longer exists**
+* Cannot rollback
+
+**➤ Example**
+
+```sql
+DROP TABLE employees;
+DROP DATABASE company_db;
+```
+
+---
+
+## 🧠 Quick Summary
+
+* **DELETE** → Remove specific rows (safe & flexible)
+* **TRUNCATE** → Remove all rows quickly (keep table)
+* **DROP** → Remove entire table/database (dangerous)
+
+---
+
+## 🎯 When to Use What?
+
+* Use **DELETE** → When you need to remove specific records
+* Use **TRUNCATE** → When you want to quickly empty a table
+* Use **DROP** → When you want to permanently remove a table or database
+
+---
+
+## ⚠️ Important Tip
+
+> Always use `WHERE` with `DELETE` to avoid accidental full data loss.
+
+```sql
+-- Dangerous ❌
+DELETE FROM employees;
+
+-- Safe ✅
+DELETE FROM employees WHERE id = 10;
+```
+
+---
+
