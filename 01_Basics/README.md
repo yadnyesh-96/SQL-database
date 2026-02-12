@@ -99,10 +99,35 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
 
 - Basically Data definition Language it is used to for **create table, procedure, trigger, function, view database, as well as drop & alter database table,etc.**
 - DDL command works with **table structure**.
-1. Create : It is used for create table, create database, create procedure etc.<br>
+---
+1. **Create** : It is used for create table, create database, create procedure etc.<br>
 **Sysntax** : create database database_name; <br>
 **ex.** 
 ```
 create database july2025;
 ```
 ![alt text](image-4.png)
+
+**Sysntax** : create table table_name; <br>
+**ex.** 
+```
+create table student(std_Id INT(3),std_name VARCHAR(50),std_fees INT(4));
+```
+![alt text](image-5.png)
+---
+2. **Desc** : This command is used for describe the table structure like as column name in table and column data type, column size etc.,<br>
+**Sysntax** : desc table_name; <br>
+**ex.** 
+```
+desc student;
+```
+![alt text](image-6.png)
+---
+3. **alter** : alter is used for modified the column name, add new column, remove column from table, change column type or size, etc.,<br>
+*alter commands has some sub-commands*
+-   Add : this option to help us to add a new column in the database table after the table creation.<br>
+**Sysntax** : alter table table_name column_name datatype(size);<br>
+**ex.** 
+```
+alter table student add std_dept VARCHAR(60);
+```
