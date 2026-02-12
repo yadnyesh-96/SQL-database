@@ -221,7 +221,13 @@ update student set std_address = 'Pune';
 ![alt text](image-17.png)
 ---
 We can update specific row or update specific column using condition where clause.<br>
-**Example**
+**Syntax** : update tablename set column = value where condition; <br>
+**example** : If we think the above table data and we want to change the address of student where student id is 2 which means to change 'Pune' to 'Mumbai'.
+```
+update student set std_address = 'Mumbai' where std_Id=2;
+```
+![alt text](image-18.png)
+---
 
 
 
