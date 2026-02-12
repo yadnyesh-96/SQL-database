@@ -101,14 +101,14 @@ MYSQL is a database tool wich provides an environment for us to work with Relati
 - DDL command works with **table structure**.
 ---
 1. **Create** : It is used for create table, create database, create procedure etc.<br>
-**Sysntax** : create database database_name; <br>
+**Syntax** : create database database_name; <br>
 **ex.** 
 ```
 create database july2025;
 ```
 ![alt text](image-4.png)
 
-**Sysntax** : create table table_name; <br>
+**Syntax** : create table table_name; <br>
 **ex.** 
 ```
 create table student(std_Id INT(3),std_name VARCHAR(50),std_fees INT(4));
@@ -116,7 +116,7 @@ create table student(std_Id INT(3),std_name VARCHAR(50),std_fees INT(4));
 ![alt text](image-5.png)
 ---
 2. **Desc** : This command is used for describe the table structure like as column name in table and column data type, column size etc.,<br>
-**Sysntax** : desc table_name; <br>
+**Syntax** : desc table_name; <br>
 **ex.** 
 ```
 desc student;
@@ -125,9 +125,38 @@ desc student;
 ---
 3. **alter** : alter is used for modified the column name, add new column, remove column from table, change column type or size, etc.,<br>
 *alter commands has some sub-commands*
--   Add : this option to help us to add a new column in the database table after the table creation.<br>
-**Sysntax** : alter table table_name column_name datatype(size);<br>
+-  1. Add : this option to help us to add a new column in the database table after the table creation.<br>
+**Syntax** : alter table table_name column_name datatype(size);<br>
 **ex.** 
 ```
 alter table student add std_dept VARCHAR(60);
 ```
+![
+](image-7.png)
+
+---
+-  2. Modify : Using a modify option we can change only size and data type of column.<br>
+**example** : if we think about above table we have *std_dept* column with data type *VARCHAR* and size *30* we want to modified *std_dept* size to *50* . <br> 
+**Syntax** : alter table table_name column_name datatype(size);<br>
+**ex.** 
+```
+alter table employee modify std_dept int(50);
+```
+![alt text](image-8.png)
+---
+-  3. drop : drop is used to remove the column from database table. <br>
+**example** : if we think about the above table we have the *std_dept* column and we want to remove it from the student table. <br>
+**Syntaxt** : alter table table_name drop columnname; <br>
+**ex**
+```
+alter table student drop std_dept;
+```
+![alt text](image-9.png)
+
+-   4. Rename : rename option is used for change the name of column. <br>
+**Syntax** : alter table tablename rename column oldcolumnname to newcolumnname. <br>
+**ex**: if we think about above table student we have *std_name* so we want to modify *std_name* to *std_nm* . <br>
+```
+alter table student rename column std_name to std_nm;
+```
+![alt text](image-10.png)
