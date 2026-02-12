@@ -160,3 +160,9 @@ alter table student drop std_dept;
 alter table student rename column std_name to std_nm;
 ```
 ![alt text](image-10.png)
+---
+4. **Drop** : drop statement is used for the drop the table or drop or delete database, procedure, trigger, function, index etc., <br>
+**Syntax** : drop table tablename;
+```
+drop table student
+```
