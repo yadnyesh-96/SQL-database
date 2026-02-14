@@ -258,7 +258,7 @@ A beginner-friendly guide to understand the differences between `DELETE`, `TRUNC
 Removes **selected rows (data)** from a table.<br>
 **➤ Works on**
 - ✅ Table rows (data)
-- ❌ Entire database <br>
+- ❌ Entire database <br
 
 **➤ Syntax**
 ```sql
