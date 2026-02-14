@@ -430,7 +430,21 @@ DELETE FROM employees WHERE id = 10;
       ---
       **B. `max` :** This function is used to return max value from column.<br>
       **Syntax** : select max(columname) from tablename;
+
+      ---
+
       **C. `min` :** This function is used to return min value from column.<br>
-      **Syntx** : select min(columname) from tablename;
-      **D. `sum` :** This function is used to return sum of all values present in that column.
-      **E. `avg` :** avg function is used for calculate 
+      **Syntx** : select min(columname) from tablename;<br>
+
+      ---
+
+      **D. `sum` :** This function is used to return sum of all values present in that column.<br>
+      **Syntax** : select sum(coumname) from tablename. <br>
+
+      ---
+
+      **E. `avg` :** avg function is used for calculate the average value of column means internally sum of all non null value / count of non null value.<br>
+      **Syntax** : select avg(columname) from student; 
+
+      ---
+      ![alt text](image-28.png)
