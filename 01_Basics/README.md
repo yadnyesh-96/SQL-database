@@ -415,7 +415,7 @@ DELETE FROM employees WHERE id = 10;
     ```
     ![alt text](image-26.png)
 ---
-- ### **Group by** : 
+- ### 4. **Group by** : 
     Before group by clause we need to know `Aggregate` function or `group` frunction.
     - **Aggregate** function or **group** function <br>
     Aggregate function known as group function and it is used for fetch data from column or specified column result the single value as result. <br>
@@ -457,3 +457,13 @@ DELETE FROM employees WHERE id = 10;
          - a. we can use column name with select statement whose name use with group.
          - b. we can use aggregate function or group function in select query when use group by with select.<br>
          **example** : Write a Query to find student count who having fees.
+         ![alt text](image-29.png)
+---
+- ### 5. **having** :
+    Having clause is used for checked condition with group by clause Normally we cannot use group function or aggregate function with where clause for the check condition then we can use having with group by clause.<br>
+    **Note** : We cannot use the having clause without group by clause.<br>
+    **Syntax** : select columnname, groupfuntion(column) from tablename group by columnname having condition.<br>
+    **Example** : Write a Query to find duplicate fees from student table.
+    ![alt text](image-30.png)
+---
+- ### 6. **having** :
