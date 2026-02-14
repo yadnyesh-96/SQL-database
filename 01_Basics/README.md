@@ -467,3 +467,14 @@ DELETE FROM employees WHERE id = 10;
     ![alt text](image-30.png)
 ---
 - ### 6. **having** :
+    Arrange the table data in ascending or descending order.<br>
+    **Syntax** : select *from tablename by columnname desc | asc 
+    ```
+    select *from student desc;
+    ```
+---
+
+- ### 7. **Like operator** :
+    Like operator is used for pattern matching operator or write pattern query normally it is used for searching purpose. Means we have some search pattern then we have use the like as operator.<br>
+    **Example** : Suppose consider we have the student table and we want to find student whose name start with r ot ends with sh or name contains at least three letters etc.,<br>
+    
