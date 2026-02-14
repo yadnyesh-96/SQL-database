@@ -452,3 +452,8 @@ DELETE FROM employees WHERE id = 10;
       - ###  **Group by clause** :
          group by clause is used to for perform grouping of similar values using specific column and normally group by clause work with aggregate function or group function.<br>
          **Syntax** : select columname from tablename where group by columnname;<br>
+         > Important points related with group by clause
+         ---
+         - a. we can use column name with select statement whose name use with group.
+         - b. we can use aggregate function or group function in select query when use group by with select.<br>
+         **example** : Write a Query to find student count who having fees.
