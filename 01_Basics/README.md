@@ -486,3 +486,15 @@ DELETE FROM employees WHERE id = 10;
     ![alt text](image-33.png)
     ![alt text](image-34.png)
     ![alt text](image-35.png)
+---
+
+### 🔢 What is the correct sequence of when all clauses are used in a single query?
+
+**1. Where**  
+**2. Like**
+**3. Group by**   
+**4. Having**  
+**5. order by** 
+
+```
+select std_fees count(std_fees) from student where std_fees>5000 and std_name like 'r%' group by std_fees having count(std_fees)>1 order by count(std_fees) desc;
