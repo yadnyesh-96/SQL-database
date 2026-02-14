@@ -17,7 +17,10 @@ create table employee(eid INT(5),name VARCHAR(200)not null,salary INT(5));
 ![alt text](image.png)
 ---
 ### 2. **Unique** :
-- Unique contraints is used to store the unique value in column means we can not store duplicate values in column using unique contraints.<br>
+- Unique constraints  is used to store the unique value in column means we can not store duplicate values in column using unique constraints .<br>
 - **Syntax** : create table tablename (columnname datatype(size)unique...);<br>
 - **Example** :  Suppose create table name as employee with column id,name,email,contact , salary and here contact and email should be unique and name should not null.
 ![alt text](image-1.png)
+---
+### 2. **Primary** :
+- Primary key constraints  is by default 
