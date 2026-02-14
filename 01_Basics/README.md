@@ -450,4 +450,5 @@ DELETE FROM employees WHERE id = 10;
       ![alt text](image-28.png)
       ---
       - ###  **Group by clause** :
-         group by clause is used to for perform grouping of similar values using specific column and normally group by clause work with aggregate function or group function
+         group by clause is used to for perform grouping of similar values using specific column and normally group by clause work with aggregate function or group function.<br>
+         **Syntax** : select columname from tablename where group by columnname;
