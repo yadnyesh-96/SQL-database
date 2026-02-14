@@ -375,4 +375,5 @@ DELETE FROM employees WHERE id = 10;
 ```
 
 ---
-
+- ### `where` clause :<br>
+    **where** clause is used for apply condition SQL statement and query Means we can apply where clause with *delete*, *select* or *update* *statement*. 
