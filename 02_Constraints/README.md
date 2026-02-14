@@ -31,4 +31,14 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 ```
 ![alt text](image-2.png)
 ---
- 
+> **What is the difference between Primary key and Unique key constraints ?**
+
+
+| Primary Key | Unique Key |
+|-------------|------------|
+| We can create only one column as primary key in whole table. | we can create more than one column as unique key in single table. |
+| Primary is by default not null and unique. | Unique is not by default null means can hold null value. |
+| Primary key use by default cluster index. | Unique key use cluster or secondary index. |
+| Primary key can use as a reference in another table i.e mark a foregin key and it is recommended. | Unique key is not recommended as foregin key in child table. |
+
+---
