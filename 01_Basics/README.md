@@ -482,3 +482,7 @@ DELETE FROM employees WHERE id = 10;
     - `%` : this operator indicate zero or more character.
     - `_` : this pattern represents single characters.
     ![alt text](image-31.png)
+    ![alt text](image-32.png)
+    ![alt text](image-33.png)
+    ![alt text](image-34.png)
+    ![alt text](image-35.png)
