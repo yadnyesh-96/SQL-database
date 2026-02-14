@@ -477,4 +477,8 @@ DELETE FROM employees WHERE id = 10;
 - ### 7. **Like operator** :
     Like operator is used for pattern matching operator or write pattern query normally it is used for searching purpose. Means we have some search pattern then we have use the like as operator.<br>
     **Example** : Suppose consider we have the student table and we want to find student whose name start with r ot ends with sh or name contains at least three letters etc.,<br>
-    
+    **Syntax** : select *from student where columnname like pattern; <br>
+    *If we want to work with like operator we have some wild card characters given below : <br>
+    - `%` : this operator indicate zero or more character.
+    - `_` : this pattern represents single characters.
+    ![alt text](image-31.png)
