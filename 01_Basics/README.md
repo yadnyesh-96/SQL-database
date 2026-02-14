@@ -418,5 +418,16 @@ DELETE FROM employees WHERE id = 10;
 - ### **Group by** : 
     Before group by clause we need to know `Aggregate` function or `group` frunction.
     - **Aggregate** function or **group** function <br>
-    Aggregate function known as group function and it is used 
+    Aggregate function known as group function and it is used for fetch data from column or specified column result the single value as result. <br>
+    **Types of Aggregate Function :**
     ---
+    **A. `count` :** count function is used for count number of records in table or row in table.
+    - There are Two ways to use count function:
+      1. `select count(colname) from tablename` : when we pass column name is count function then we can count only non nun values present in column.
+      2. `select count(*) from tablename` : when we pass `*` (wild card operator) in count function then we count not null as well as null from column.<br>
+      **Example of `count` function**
+      ![alt text](image-27.png)
+      ---
+      **B. `max` :** This function is used to return max value from column.<br>
+      **Syntax** : select max(columname) from tablename;
+      
