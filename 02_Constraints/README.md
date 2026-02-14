@@ -23,4 +23,12 @@ create table employee(eid INT(5),name VARCHAR(200)not null,salary INT(5));
 ![alt text](image-1.png)
 ---
 ### 3. **Primary** :
-- Primary key constraints  is by default 
+- Primary key constraints  is by default not null and unique means we mark any column as primary key then we cannot store null value in it and duplicate value in it.<br>
+- **Syntax** : create table tablename (columnname datatype(size)primary key...);
+- **Example** :  we want to create employee table and every employee id should be unique and not null ,name not null, email unique and not null and contact unique and not null.
+```
+create table employee(eid int(5) primary key, name varchar(200) not null, email varchar(200) not null unique, contact varchar(200) not null unique);
+```
+![alt text](image-2.png)
+---
+ 
