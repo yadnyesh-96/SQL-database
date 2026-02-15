@@ -48,3 +48,14 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 - **Syntax** : create table tablename(columnname datatype(size),foregin key (columname)reference paranttablename(primarykey column));
 - **Example** :
 ![alt text](image-3.png)
+![alt text](image-4.png)
+
+    If we want to delete the relationship developed entry then we have to 
+![alt text](image-5.png)
+![alt text](image-6.png)
+- But this approach is not recommended when large database.
+- If we want to delete primary key record or update primary key record then child record should be automatically delete or update then we have three type of constraints: 
+1. On delete cascade.
+2. On update cascade.
+3. On delete set null.
+These constraints only work with foreign key constraints.
