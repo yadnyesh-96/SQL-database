@@ -42,3 +42,6 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 | Primary key can use as a reference in another table i.e mark a foregin key and it is recommended. | Unique key is not recommended as foregin key in child table. |
 
 ---
+### 4. **Foregin Key** :
+- Foregin key constraints is used for maintain the relationship between two tables means we can use primary key of some another table as foregin key in other table and primary key column table known as parent table and foregin key column table known as child table.
+- **How to create foregin key column**
