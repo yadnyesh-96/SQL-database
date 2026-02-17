@@ -59,4 +59,28 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 2. On update cascade.
 3. On delete set null.<br>
 These constraints only work with foreign key constraints.
-> 
+---
+
+> **1. ON DELETE CASCADE** <br>
+
+- This constraints help us to delete the child record automatically when parent record get deleted.
+
+```
+--table -1 
+create table dept(deptid INT(3) PRIMARY KEY AUTO_INCREMENT,deptName VARCHAR(200));
+
+--table -2
+create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,);
+```
+
+> **2. ON UPDATE CASCADE** <br>
+
+-  When we update primary key then child record update automatically.
+
+
+> **3. on delete set null** <br>
+
+- These constraints on delete set null means when we delete the parent record then child record set null automatically in foreign key column so we can use on delete set null constraint with foreign key.<br>
+   - a.  On delte cascade and on delete cascade can use at a time.
+   - b.  On delete cascade and on delete casecade set null cannot use same time with same column.
+   - c.  On delete set null and on update cascade can use same time with same column. 
