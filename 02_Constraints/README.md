@@ -125,4 +125,4 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 
 ### 6. **Default constraints** :
 -  Default constraints is used for pass default value to column and by default every column has null as default value and when user set default value at the time of table creation and if user not provide value to that column then database by default store default set by user at the time of table creation.
--  **Syntax** :
+-  **Syntax** : create table tablename(columnname datatype(size) default value);
