@@ -101,3 +101,26 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 
 ---
 
+### 5. **Check constraints** :
+- This constraints is used for apply condition with column at the time of table creation.
+- **Syntax** : create table tablename(columnname datatype(size) check (condition),...);
+- **Example** : Suppose consider we are working on voting application and we want to create table for vote but the rule is if voter age is below 18 then record of voter should not accept by database.
+  ````
+  -- create the table first
+
+  create table candidates(id INT(5)PRIMARY KEY AUTO_INCREMENT, name VARCHAR(200)NOT NULL,age INT(5) CHECK(age>18));
+
+
+  -- insert data into table
+
+  insert into candidates(id,name,age)
+  VALUES
+  (0,'Vijay',18); 
+
+  -- if we insert age > 18 then we get error.
+  ````
+  ![alt text](image-12.png)
+
+  ---
+
+  
