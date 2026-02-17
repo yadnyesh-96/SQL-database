@@ -87,6 +87,8 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 
 -  When we update primary key then child record update automatically.
 
+![alt text](image-10.png)
+
 
 >### **3. on delete set null** <br>
 
@@ -94,3 +96,8 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
    - a.  On delte cascade and on delete cascade can use at a time.
    - b.  On delete cascade and on delete casecade set null cannot use same time with same column.
    - c.  On delete set null and on update cascade can use same time with same column. 
+  
+![alt text](image-11.png)
+
+---
+
