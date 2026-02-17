@@ -59,3 +59,4 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 2. On update cascade.
 3. On delete set null.<br>
 These constraints only work with foreign key constraints.
+> 
