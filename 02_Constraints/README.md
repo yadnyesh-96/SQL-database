@@ -127,3 +127,19 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 -  Default constraints is used for pass default value to column and by default every column has null as default value and when user set default value at the time of table creation and if user not provide value to that column then database by default store default set by user at the time of table creation.
 -  **Syntax** : create table tablename(columnname datatype(size) default value);
 ![alt text](image-13.png)
+
+---
+
+### 6. **AUTO_INCREMENT constraints** :
+- AUTO_INCREMENT constraints is used for increased primary key or unique key value autmatically.
+- **Syntax** :  CREATE TABLE tableName(columnName datatype(size)PRIMARY KEY AUTO_INCREMENT...);
+- **Logic** (Behind) `SELECT MAX(COL)+1 FROM tableName;`
+- **Example** : We want to create table name as player with column `pId` , `name` and `run` and we want to generate the player id automatically.
+```
+-- for auto increment constraints we use 
+
+CREATE TABLE player(pId INT(5)PRIMARY KEY AUTO_INCREMENT,pName VARCHAR(200),run INT(5));
+```
+![alt text](image-14.png)
+
+-----
