@@ -17,18 +17,26 @@
 
 - **Inner join** is used for fetch data from common data between tables those are interconnected with each other.
 - Means inner join can fetch common data from left hand side table as well as right hand side table but fetch common data means fetch data from child table and map with parent if parent record primary key column present in child table otherwise not.
-
+![alt text](image.png)
 ---
 
 > ### 1. **Left join**
 
 -   **Left join** means fetch all data or records from left hand side table but common records from right hand side table.
+-   **Syntax** : select columname ltref.columnname from leftable ltref joinType righttable rtref on ltref.columnname = rtref.columname;
+![alt text](image-1.png)
+---
 
 
 > ### 1. **Right join**
 
 -   **Right join** means fetch all data or records from right hand side and common records from left hand side table.
+-   **Syntax** : select columname ltref.columnname from leftable ltref joinType righttable rtref on ltref.columnname = rtref.columname;
+![alt text](image-2.png)
+---
 
 > ### 1. **Outer join** 
 
 - Outer join it is a combination of left and right join means fetch all data or records from left hand side and right hand side tables.  
+
+
