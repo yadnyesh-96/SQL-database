@@ -57,5 +57,5 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 - If we want to delete primary key record or update primary key record then child record should be automatically delete or update then we have three type of constraints: 
 1. On delete cascade.
 2. On update cascade.
-3. On delete set null.
+3. On delete set null.<br>
 These constraints only work with foreign key constraints.
