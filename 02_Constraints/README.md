@@ -70,7 +70,7 @@ These constraints only work with foreign key constraints.
 create table dept(deptId INT(3) PRIMARY KEY AUTO_INCREMENT,deptName VARCHAR(200));
 
 --table -2
-create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200)NOT NULL,email VARCHAR(200)NOT NULL UNIQUE,contact VARCHAR(200)NOT NULL UNIQUE,deptId INT(5),FOREIGN KEY(deptId));
+create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200)NOT NULL,email VARCHAR(200)NOT NULL UNIQUE,contact VARCHAR(200)NOT NULL UNIQUE,deptId INT(5),FOREIGN KEY(deptId)REFERENCES dept(deptId)ON DELETE CASCADE);
 ```
 
 > **2. ON UPDATE CASCADE** <br>
