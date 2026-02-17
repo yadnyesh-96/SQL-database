@@ -122,5 +122,6 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
   ![alt text](image-12.png)
 
   ---
-  
+
+### 6. **Default constraints** :
 
