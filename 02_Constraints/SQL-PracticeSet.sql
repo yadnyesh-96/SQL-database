@@ -1,0 +1,12 @@
+USE july2025;
+
+CREATE TABLE team(
+	P_Id INT(5) PRIMARY KEY AUTO_INCREMENT,
+    p_Name VARCHAR(200) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    contact VARCHAR(200) NOT NULL,
+    stat VARCHAR(200) NOT NULL,
+    run_Record INT(5) NOT NULL,
+	salary INT(5)NOT NULL );
+
+DESC team;
