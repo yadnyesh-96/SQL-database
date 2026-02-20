@@ -43,7 +43,7 @@ SELECT *FROM team WHERE state = 'Maharashtra';
 -- show the player records whose state is Maharashtra, Punjab, gujrat and Delhi?
 SELECT *FROM team WHERE state = 'Maharashtra' OR state='Punjab' OR state='gujrat' OR state='Delhi';
 -- we also display same these data by using the IN BETWEEN Clause.
-SELECT *FROM team WHERE state IN('Maharashtra','Punjab','gujrat','Delhi');
+SELECT *FROM team WHERE state IN('Maharashtra','Punjab','Gujrat','Delhi');
 
 -- show the player record run wise in descending order
 SELECT *FROM team ORDER BY run_Record DESC;
@@ -62,16 +62,16 @@ SELECT *FROM team ORDER BY run_Record DESC, salary DESC;
 SELECT count(P_Id)  FROM team;
 
 -- Query to count the employee whose salary between 3000 to 20000
-SELECT count(P_Id) FROM team WHERE salary IN (3000,20000);
+SELECT count(P_Id) FROM team WHERE salary BETWEEN 3000 AND 20000;
 
 --  Query to calculate the sum of all employee salary from employee table.
 SELECT sum(salary) FROM team;
 
 -- Query to calculate the sum of employee except the dinesh and rajesh
-SELECT sum(salary) FROM team WHERE p_Name IN('Dinesh','rajesh');
+SELECT sum(salary) FROM team WHERE p_Name NOT IN('Dinesh','rajesh');
 
 -- Query to count the employee whose salary greater than 3000 and less than 20000 and whose name is not a ram and rupali.
-SELECT count(P_Id) FROM team WHERE salary>3000 OR salary<20000;
+SELECT count(P_Id) FROM team WHERE salary>3000 AND salary<20000 AND p_Name NOT IN ('Ram','Rupali');
 
 -- Query to find the minimum salary of employee
 SELECT min(salary) FROM team;
