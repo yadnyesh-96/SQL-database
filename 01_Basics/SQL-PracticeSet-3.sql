@@ -64,3 +64,9 @@ SELECT *FROM employee WHERE salary>=30000 AND department='IT';
 
 --  SQL query to display employees whose salary is less than 30000 or department is 'Finance'.
 SELECT *FROM employee WHERE salary<30000 AND department='Finance';
+
+-- SQL query to display employees whose name contains the letter 'a'.
+SELECT *FROM employee WHERE emp_name LIKE '%a%';
+
+-- SQL query to increase salary of all employees in the 'IT' department by 2000.
+SELECT 
