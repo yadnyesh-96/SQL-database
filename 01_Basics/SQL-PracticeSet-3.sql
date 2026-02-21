@@ -69,4 +69,6 @@ SELECT *FROM employee WHERE salary<30000 AND department='Finance';
 SELECT *FROM employee WHERE emp_name LIKE '%a%';
 
 -- SQL query to increase salary of all employees in the 'IT' department by 2000.
-SELECT 
+UPDATE employee SET salary=salary+2000 WHERE department='IT';
+
+
