@@ -14,3 +14,10 @@ INSERT INTO employee VALUES(6,'Rohan','IT',30000,'2024-02-01');
 --  SQL query to insert two new employees:
 -- (7, 'Sneha', 'HR', 26000, '2023-11-10')
 -- (8, 'Vikram', 'Finance', 38000, '2022-08-18').
+
+INSERT INTO employee(emp_id,emp_name,department,salary,join_date)
+VALUES
+(7,'Sneha','HR',26000,'2023-11-10'),
+(8,'Vikram','Finance',38000,'2022-08-18');
+
+
