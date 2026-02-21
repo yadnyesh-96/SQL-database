@@ -143,3 +143,31 @@ SELECT *FROM employee;
 
 -- SQL query to delete employees whose department is not 'IT' and salary is less than 28000.
 DELETE FROM employee WHERE dEpartment='IT' AND salary<28000;
+
+-- SQL query to display the total salary department-wise using GROUP BY.
+SELECT department, sum(salary) FROM employee GROUP BY department;
+
+--  SQL query to display the average salary department-wise and order the result by average salary descending.
+SELECT department, avg(salary) AS avg_salary FROM employee GROUP BY department ORDER BY avg_salary DESC;
+
+-- SQL query to display the count of employees in each department.
+SELECT department, count(emp_id) FROM employee GROUP BY department;
+
+-- SQL query to display departments having more than 2 employees using GROUP BY and HAVING.
+SELECT department, count(emp_id) FROM employee GROUP BY department HAVING count(emp_id)>=2;
+
+--  SQL query to display the maximum salary department-wise.
+SELECT department, max(salary) FROM employee GROUP BY department;
+
+-- SQL query to display departments where the minimum salary is greater than 30000.
+SELECT department, min(salary) FROM employee GROUP BY department HAVING min(salary)>30000;
+
+-- SQL query to display employees whose name contains exactly 4 characters.
+SELECT *FROM employee WHERE emp_name LIKE '_ _ _ _%';
+
+-- SQL query to display employees whose name ends with a vowel.
+SELECT *FROM employee WHERE emp_name LIKE '%aeiou';
+
+-- SQL query to display employees ordered first by department ascending and then by salary descending.
+s
+SELECT *FROM employee;
