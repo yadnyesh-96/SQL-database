@@ -91,4 +91,23 @@ UPDATE employee SET salary = salary*0.10 WHERE department='HR';
 --  SQL query to delete employee whose emp_id is 2.
 DELETE FROM employee WHERE emp_id=5;
 
+-- SQL query to delete employees from 'Marketing' department.
+DELETE FROM employee WHERE department='Marketing';
+
+-- SQL query to delete employees whose salary is less than 25000.
+DELETE FROM employee WHERE salary<25000; 
+
+-- SQL query to find the total salary of all employees.
+SELECT sum(salary) FROM employee;
+
+-- SQL query to find the average salary of employees in 'IT' department.
+SELECT avg(salary) FROM employee WHERE department='IT';
+
+-- SQL query to find the maximum and minimum salary from the Employee table.
+SELECT max(salary) AS Maximum , min(salary) AS Minimum FROM employee;
+
+-- 
+
+
+
 SELECT *FROM employee;
