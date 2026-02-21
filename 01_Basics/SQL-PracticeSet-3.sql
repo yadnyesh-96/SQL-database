@@ -1,4 +1,4 @@
-
+,
 USE company;
 
 CREATE TABLE employee(
@@ -20,4 +20,9 @@ VALUES
 (7,'Sneha','HR',26000,'2023-11-10'),
 (8,'Vikram','Finance',38000,'2022-08-18');
 
+-- SQL query to insert a new employee with emp_id 9, emp_name 'Anjali', department 'Marketing', salary 42000, and today’s date as join_date.
+INSERT INTO employee VALUES(9,'Anjali','Marketing',42000,'2026-02-21');
+
+-- SQL query to insert a new employee whose salary is greater than 50000.
+INSERT INTO employee VALUES(10,'Harshal','Merchant-Navy',60000,'2025-06-21');
 
