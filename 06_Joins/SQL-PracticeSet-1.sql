@@ -66,5 +66,34 @@ SELECT
     LEFT JOIN 
     employee e ON e.project_Id = p.project_Id;
 
+--  Combined data with salary
+SELECT e.emp_Id, e.emp_Name, e.salary,p.project_title,p.location FROM employee e LEFT JOIN project p ON p.project_Id = e.project_Id;
+
+--  Employee with their Manager (Self Join)
+SELECT e.emp_Name AS Employee ,
+	   e1.emp_Name AS Manager 
+       FROM employee e LEFT JOIN employee e1 
+       ON e.manager_Id =  e1.emp_Id;	
+
+-- Employees working under same manager
+SELECT e1.emp_Name AS Employee1,
+	   e2.emp_Name AS Employee2,
+       e1.manager_Id
+FROM employee e1 JOIN employee e2
+ON e1.manager_Id = e2.manager_Id 
+AND e1.emp_Id <> e2.emp_Id;
+       
+-- Manager and total team salary
+SELECT manager_Id, sum(salary) FROM employee WHERE manager_id IS NOT NULL GROUP BY manager_Id;
+
+-- All possible combinations
+SELECT *FROM employee CROSS JOIN project;
+
+-- Count total combinations
+SELECT COUNT(*) AS Total_Combination FROM employee CROSS JOIN project;
+
+-- Cartesian join with condition (filter after join)
+SELECT *FROM employee e CROSS JOIN project p WHERE e.project_Id = p.project_Id;
+
 SELECT * FROM project;
 SELECT * FROM employee;
