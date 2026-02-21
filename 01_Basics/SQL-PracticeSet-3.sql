@@ -31,3 +31,12 @@ INSERT INTO employee VALUE(11,'Rahul','IT',35000,'2023-06-25');
 
 --  SQL query to display all records from the Employee table.
 SELECT *FROM employee;
+
+-- SQL query to display only emp_name and salary of all employees.
+SELECT emp_name, salary FROM employee;
+
+-- SQL query to display employees working in the 'IT' department.
+SELECT *FROM employee WHERE department='IT';
+
+-- SQL query to display employees whose salary is greater than 30000.
+SELECT *FROM employee WHERE salary>30000;
