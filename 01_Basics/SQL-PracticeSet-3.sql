@@ -166,8 +166,10 @@ SELECT department, min(salary) FROM employee GROUP BY department HAVING min(sala
 SELECT *FROM employee WHERE emp_name LIKE '_ _ _ _%';
 
 -- SQL query to display employees whose name ends with a vowel.
-SELECT *FROM employee WHERE emp_name LIKE '%aeiou';
+SELECT *FROM employee WHERE emp_name OR emp_name LIKE '%e'  OR emp_name LIKE '%i'   OR emp_name LIKE '%o'   OR emp_name LIKE '%u';
 
 -- SQL query to display employees ordered first by department ascending and then by salary descending.
-s
+SELECT *FROM employee ORDER BY emp_name ASC;
+SELECT *FROM employee ORDER BY salary DESC;
+
 SELECT *FROM employee;
