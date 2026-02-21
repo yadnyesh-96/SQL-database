@@ -112,9 +112,26 @@ SELECT *FROM employee ORDER BY salary DESC;
 -- SQL query to display employees whose salary is greater than or equal to 30000 and less than or equal to 50000, ordered by salary ascending.
 SELECT *FROM employee WHERE salary>=30000 AND salary<=50000 ORDER BY  salary ASC;
 
+-- SQL query to display employees whose department is not 'HR' and salary is greater than 25000.
+SELECT *FROM employee WHERE department!='HR' AND salary>=25000;
 
+-- SQL query to display employees whose name does not start with 'A' and salary is greater than 30000.
+SELECT *FROM employee WHERE emp_name NOT LIKE 'A%' AND salary>30000;
 
+-- SQL query to display employees who joined between '2021-01-01' and '2023-12-31', ordered by join_date descending.
+SELECT *FROM employee WHERE join_date BETWEEN '2021-01-01' AND '2023-12-31' ORDER BY join_date DESC;
 
+-- SQL query to display employees whose salary is divisible by 5000.
+SELECT *FROM employee WHERE salary%5=0;
+
+--  SQL query to increase salary by 15% for employees who joined before '2022-01-01'.
+UPDATE employee SET salary = salary+(salary*0.15) WHERE join_date<'2022-01-01';
+
+-- SQL query to decrease salary by 5% for employees whose department is 'Finance'.
+UPDATE employee SET salary = salary-(salary*0.05) WHERE department='Finance';
+
+-- SQL query to update the department to 'Senior IT' for employees whose salary is greater than or equal to 45000.
+UPDATE employee SET department = 'Senior IT' WHERE salary>=45000;
 
 
 SELECT *FROM employee;
