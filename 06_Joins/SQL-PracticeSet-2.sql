@@ -119,6 +119,17 @@ SELECT *FROM student WHERE city='New York';
 
 -- 4.️Female students
 SELECT *FROM student WHERE gender='Female';
+
+-- 5️.Students registered after 2024-01-01
+SELECT *FROM student WHERE reg_Date>'2024-01-01';
+
+-- 6.️Subjects with total marks > 80
+SELECT *FROM subject WHERE total_Marks>80;
+
+-- 7.️Exams between two dates
+SELECT *FROM ExamSchdeule WHERE exam_date BETWEEN '2024-01-01' AND '2025-01-01';
+
+
 SELECT * FROM student;
 SELECT * FROM subject;
 SELECT * FROM ExamSchdeule;
