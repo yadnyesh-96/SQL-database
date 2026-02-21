@@ -53,3 +53,6 @@ SELECT *FROM employee WHERE salary BETWEEN 25000 AND 40000;
 --  SQL query to display employees whose salary is not equal to 35000.
 SELECT *FROM employee WHERE salary NOT IN(35000);
 
+-- SQL query to display employees who work in 'HR' or 'IT' department.
+SELECT *FROM employee WHERE department IN('HR','IT');
+
