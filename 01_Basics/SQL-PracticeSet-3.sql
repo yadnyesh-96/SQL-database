@@ -40,3 +40,16 @@ SELECT *FROM employee WHERE department='IT';
 
 -- SQL query to display employees whose salary is greater than 30000.
 SELECT *FROM employee WHERE salary>30000;
+
+-- SQL query to display employees who joined after '2022-01-01'.
+SELECT *FROM employee WHERE join_date = '2022-01-01';
+
+-- SQL query to display distinct department names from the Employee table.
+SELECT DISTINCT department FROM employee;
+
+--  SQL query to display employees whose salary is between 25000 and 40000.
+SELECT *FROM employee WHERE salary BETWEEN 25000 AND 40000;
+
+--  SQL query to display employees whose salary is not equal to 35000.
+SELECT *FROM employee WHERE salary NOT IN(35000);
+
