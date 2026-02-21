@@ -26,3 +26,5 @@ INSERT INTO employee VALUES(9,'Anjali','Marketing',42000,'2026-02-21');
 -- SQL query to insert a new employee whose salary is greater than 50000.
 INSERT INTO employee VALUES(10,'Harshal','Merchant-Navy',60000,'2025-06-21');
 
+-- SQL query to insert a record for emp_id 11, emp_name 'Rahul', department 'IT', salary 35000, and join_date '2023-06-25'.
+INSERT INTO employee VALUE(11,'Rahul','IT',35000,'2023-06-25');
