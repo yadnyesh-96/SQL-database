@@ -106,7 +106,14 @@ SELECT avg(salary) FROM employee WHERE department='IT';
 -- SQL query to find the maximum and minimum salary from the Employee table.
 SELECT max(salary) AS Maximum , min(salary) AS Minimum FROM employee;
 
--- 
+--  SQL query to display all employees ordered by salary in descending order
+SELECT *FROM employee ORDER BY salary DESC;
+
+-- SQL query to display employees whose salary is greater than or equal to 30000 and less than or equal to 50000, ordered by salary ascending.
+SELECT *FROM employee WHERE salary>=30000 AND salary<=50000 ORDER BY  salary ASC;
+
+
+
 
 
 
