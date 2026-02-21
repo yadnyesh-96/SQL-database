@@ -56,3 +56,7 @@ SELECT *FROM employee WHERE salary NOT IN(35000);
 -- SQL query to display employees who work in 'HR' or 'IT' department.
 SELECT *FROM employee WHERE department IN('HR','IT');
 
+-- SQL query to display employees whose name starts with letter 'P'.
+SELECT *FROM employee WHERE emp_name LIKE 'P%';
+
+-- SQL query to display employees whose salary is greater than or equal to 30000 and department is 'IT'.
