@@ -1,4 +1,4 @@
-,
+
 USE company;
 
 CREATE TABLE employee(
@@ -65,10 +65,27 @@ SELECT *FROM employee WHERE salary>=30000 AND department='IT';
 --  SQL query to display employees whose salary is less than 30000 or department is 'Finance'.
 SELECT *FROM employee WHERE salary<30000 AND department='Finance';
 
+
 -- SQL query to display employees whose name contains the letter 'a'.
 SELECT *FROM employee WHERE emp_name LIKE '%a%';
 
+
 -- SQL query to increase salary of all employees in the 'IT' department by 2000.
-UPDATE employee SET salary=salary+2000 WHERE department='IT';
+ UPDATE employee SET salary=salary+2000 WHERE department='IT';
+
+-- SQL query to update department of employee with emp_id 3 to 'HR'.
+UPDATE employee SET department='HR' WHERE emp_id=3;
 
 
+INSERT INTO employee VALUES(5,'Amit','Intervewet',150000,'2004-01-18');
+
+-- SQL query to update salary of employee named 'Amit' to 30000.
+UPDATE employee SET salary=30000, department='HR' WHERE emp_name='Amit';
+
+--  SQL query to change join_date of employee with emp_id 5 to '2024-01-01'.
+UPDATE employee SET join_date = '2024-01-01' WHERE emp_id=5;
+
+-- SQL query to increase salary by 10% for employees in 'HR' department.
+
+
+SELECT *FROM employee;
