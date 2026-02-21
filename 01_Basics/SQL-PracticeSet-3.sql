@@ -133,5 +133,13 @@ UPDATE employee SET salary = salary-(salary*0.05) WHERE department='Finance';
 -- SQL query to update the department to 'Senior IT' for employees whose salary is greater than or equal to 45000.
 UPDATE employee SET department = 'Senior IT' WHERE salary>=45000;
 
+-- SQL query to update salary to 30000 for employees whose salary is less than 25000.
+UPDATE employee SET salary=30000 WHERE salary<33000;
+
+-- SQL query to delete employees who joined before '2021-01-01'.
+DELETE FROM employee WHERE join_date<'2021-01-01';
 
 SELECT *FROM employee;
+
+-- SQL query to delete employees whose department is not 'IT' and salary is less than 28000.
+DELETE FROM employee WHERE dEpartment='IT' AND salary<28000;
