@@ -86,6 +86,9 @@ UPDATE employee SET salary=30000, department='HR' WHERE emp_name='Amit';
 UPDATE employee SET join_date = '2024-01-01' WHERE emp_id=5;
 
 -- SQL query to increase salary by 10% for employees in 'HR' department.
+UPDATE employee SET salary = salary*0.10 WHERE department='HR';
 
+--  SQL query to delete employee whose emp_id is 2.
+DELETE FROM employee WHERE emp_id=5;
 
 SELECT *FROM employee;
