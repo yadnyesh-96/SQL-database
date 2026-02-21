@@ -38,6 +38,18 @@ INSERT INTO employee VALUES
 (110, 'Meena',  'Developer', 48000, 109, 4);
 
 
+-- All employees with project details (even if not assigned)
+SELECT *FROM employee;
+
+-- Employees not assigned to any project
+SELECT *FROM employee WHERE project_Id IS NUll;
+
+-- All employees with project info
+SELECT e.emp_Id,e.emp_Name,e.designation,e.salary,
+	   p.project_Id,p.project_title,p.location,p.budget 
+       FROM employee e 
+       LEFT JOIN project p 
+       ON e.project_Id = p.project_Id; 
 
 
 
