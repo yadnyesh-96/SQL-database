@@ -51,7 +51,20 @@ SELECT e.emp_Id,e.emp_Name,e.designation,e.salary,
        LEFT JOIN project p 
        ON e.project_Id = p.project_Id; 
 
+-- Employees without projects
+SELECT *FROM employee WHERE project_Id IS NULL;
+SELECT e.* FROM employee e LEFT JOIN project p ON p.project_Id = e.project_Id WHERE p.project_Id IS NULL;
 
+-- Employee count including unassigned
+SELECT count(emp_Id) FROM employee;
+
+-- All projects and employees
+SELECT 
+	p.project_Id, p.project_title, p.location, p.budget,
+    e.emp_Id, e.emp_Name, e.designation, e.salary,e.manager_Id,e.project_Id
+	FROM project p 
+    LEFT JOIN 
+    employee e ON e.project_Id = p.project_Id;
 
 SELECT * FROM project;
 SELECT * FROM employee;
