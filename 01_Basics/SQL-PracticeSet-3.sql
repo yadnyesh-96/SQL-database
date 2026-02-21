@@ -60,3 +60,7 @@ SELECT *FROM employee WHERE department IN('HR','IT');
 SELECT *FROM employee WHERE emp_name LIKE 'P%';
 
 -- SQL query to display employees whose salary is greater than or equal to 30000 and department is 'IT'.
+SELECT *FROM employee WHERE salary>=30000 AND department='IT';
+
+--  SQL query to display employees whose salary is less than 30000 or department is 'Finance'.
+SELECT *FROM employee WHERE salary<30000 AND department='Finance';
