@@ -112,7 +112,7 @@ INSERT INTO result VALUES
 SELECT *FROM student;
 
 -- 2.️Show student names and emails
-SELECT email FROM student;
+SELECT std_Name, email FROM student;
 
 -- 3.️Students from 'New York'
 SELECT *FROM student WHERE city='New York';
@@ -127,7 +127,12 @@ SELECT *FROM student WHERE reg_Date>'2024-01-01';
 SELECT *FROM subject WHERE total_Marks>80;
 
 -- 7.️Exams between two dates
-SELECT *FROM ExamSchdeule WHERE exam_date BETWEEN '2024-01-01' AND '2025-01-01';
+SELECT e.exam_Id, e.exam_date, e.duration_min, 
+       s.sub_Name
+FROM ExamSchdeule e
+INNER JOIN subject s
+ON e.sub_Id = s.sub_Id
+WHERE e.exam_date BETWEEN '2024-01-01' AND '2025-01-01';
 
 -- 8.Questions with difficulty = 'Hard'
 SELECT *FROM question WHERE difficulty_level='Hard';
@@ -172,7 +177,7 @@ SELECT *FROM result WHERE res_status='Pass';
 SELECT *FROM student ORDER BY std_Name ASC;
 
 -- 22️.Students ordered by registration_date DESC
-SELECT *FROM student ORDER BY reg_date DESC;
+SELECT * FROM student ORDER BY reg_Date DESC;
 
 -- 23️Subjects ordered by total_marks DESC
 SELECT *FROM subject ORDER BY total_Marks DESC;
@@ -197,6 +202,24 @@ SELECT *FROM result WHERE res_status='Pass' ORDER BY marks_obtained;
 
 -- 30️.Subjects containing 'Science' ordered
 SELECT *FROM subject WHERE sub_Name LIKE '%Science%' ORDER BY sub_Name ASC;
+
+-- 31️.Student with their exam results
+SELECT s.std_Name,s.email,s.gender,s.city,s.reg_Date,r.res_status AS Result FROM result r INNER JOIN student s ON r.std_Id=s.std_Id;
+
+-- 32️.Student with exam date
+SELECT e.exam_date,s.std_Id,s.std_Name FROM examschdeule e INNER JOIN result r ON r.exam_Id=e.exam_Id INNER JOIN student s ON s.std_Id=r.std_Id;
+
+-- 33️.Student with subject name
+SELECT s.sub_Name,s1.std_Name FROM student s1 
+	    JOIN result r ON r.std_Id=s1.std_Id 
+		JOIN examschdeule e ON e.exam_Id = r.exam_Id 
+        JOIN subject s ON s.sub_Id=e.sub_Id;
+
+-- 34️.Subject with questions
+SELECT s.sub_Name,q.que_text FROM subject s 
+		JOIN subjectquestion sq ON sq.sub_Id=s.sub_Id
+        JOIN question q ON sq.que_Id=q.que_Id;
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
