@@ -357,7 +357,30 @@ SELECT sb.sub_Id, sb.sub_Name, COUNT(DISTINCT r.std_Id) AS student_count
 
 
 -- 53. Student Exam Details Between Two Dates
+SELECT s.std_Id,s.std_Name,e.exam_Id,e.exam_date 
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    WHERE e.exam_date BETWEEN '2024-01-01' AND '2025-01-01';
+    
+-- 54. Total Marks Obtained Per Student
+SELECT s.std_Id,sum(r.marks_Obtained)
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    GROUP BY s.std_Id, s.std_Name;
 
+-- 55. Hard Questions Per Subject
+SELECT s.sub_Id,s.sub_Name,count(q.que_Id)
+	FROM subject s
+    JOIN SubjectQuestion sq
+    ON sq.sub_Id=s.sub_Id
+    JOIN question q
+    ON sq.que_Id=q.que_Id
+    WHERE q.difficulty_level='Hard'
+    GROUP BY s.sub_Id;
 
 SELECT * FROM student;
 SELECT * FROM subject;
