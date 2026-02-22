@@ -232,6 +232,11 @@ SELECT r.res_status,s.std_Name,s.email,s.gender,s.city
     RIGHT JOIN student s 
     ON s.std_Id=r.std_Id;
 
+-- 37️.Students who passed with subject name
+SELECT s.std_Name,ss.sub_Name,r.res_status FROM student s 
+	JOIN result r ON s.std_Id=r.std_Id
+    JOIN examschdeule e ON e.exam_Id=r.exam_Id;
+
 SELECT * FROM student;
 SELECT * FROM subject;
 SELECT * FROM ExamSchdeule;
