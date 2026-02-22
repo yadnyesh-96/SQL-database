@@ -220,6 +220,9 @@ SELECT s.sub_Name,q.que_text FROM subject s
 		JOIN subjectquestion sq ON sq.sub_Id=s.sub_Id
         JOIN question q ON sq.que_Id=q.que_Id;
 
+-- 35️.Left join students and results
+
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
