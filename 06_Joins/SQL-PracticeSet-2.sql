@@ -314,8 +314,16 @@ SELECT s.std_Id,s.std_Name,sb.sub_Name,e.exam_date,r.marks_Obtained
     ON sb.sub_Id=e.sub_Id;
 
 
--- 9.Students Who Scored More Than 70
-
+-- 49.Students Who Scored More Than 70
+SELECT s.std_Id,sb.sub_Id,r.marks_Obtained
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    JOIN subject sb 
+    ON sb.sub_Id=e.sub_Id 
+    WHERE r.marks_Obtained>70;
 
 
 SELECT * FROM student;
