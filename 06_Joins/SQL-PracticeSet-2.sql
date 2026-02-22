@@ -196,7 +196,7 @@ SELECT *FROM question WHERE difficulty_level='Hard' ORDER BY marks DESC;
 SELECT *FROM result WHERE res_status='Pass' ORDER BY marks_obtained;
 
 -- 30️.Subjects containing 'Science' ordered
-
+SELECT *FROM subject WHERE sub_Name LIKE '%Science%' ORDER BY sub_Name ASC;
 
 SELECT * FROM student;
 SELECT * FROM subject;
