@@ -129,6 +129,74 @@ SELECT *FROM subject WHERE total_Marks>80;
 -- 7.️Exams between two dates
 SELECT *FROM ExamSchdeule WHERE exam_date BETWEEN '2024-01-01' AND '2025-01-01';
 
+-- 8.Questions with difficulty = 'Hard'
+SELECT *FROM question WHERE difficulty_level='Hard';
+
+-- 9️.Students whose name starts with 'A'
+SELECT *FROM student WHERE std_Name LIKE 'A%';
+
+-- 10. Students whose email ends with gmail.com
+SELECT *FROM student WHERE email LIKE '%gmail.com';
+
+-- 11️.Subjects containing 'Math'
+SELECT *FROM subject WHERE sub_Name LIKE '%Math%';
+
+-- 12.️Questions having marks between 5 and 10
+SELECT *FROM question WHERE marks BETWEEN 5 AND 10;
+
+-- 13.️Results where marks_obtained >= 40
+SELECT *FROM result WHERE marks_Obtained>=40;
+
+-- 14️.Students from multiple cities
+SELECT *FROM student WHERE city IN ('New York','Chicago');
+
+-- 15️.Exams longer than 90 minutes
+SELECT *FROM ExamSchdeule WHERE duration_min > 90;
+
+-- 16️.Male students from Chicago
+SELECT *FROM student WHERE gender = 'Male' AND city='Chicago';
+
+-- 17️.Subjects with total_marks between 50 and 100
+SELECT *FROM subject WHERE total_Marks BETWEEN 50 AND 100;
+
+-- 18️.Questions with marks = 2
+SELECT *FROM question WHERE marks = 2;
+
+-- 19️.Students whose name contains 'son'
+SELECT *FROM student WHERE std_Name LIKE '%son%';
+
+-- 20️. Results with status 'Pass'
+SELECT *FROM result WHERE res_status='Pass';
+
+-- 21️.Students ordered by name
+SELECT *FROM student ORDER BY std_Name ASC;
+
+-- 22️.Students ordered by registration_date DESC
+SELECT *FROM student ORDER BY reg_date DESC;
+
+-- 23️Subjects ordered by total_marks DESC
+SELECT *FROM subject ORDER BY total_Marks DESC;
+
+-- 24️.Questions ordered by marks
+SELECT *FROM question ORDER BY marks DESC;
+
+-- 25️.Results ordered by marks_obtained DESC
+SELECT *FROM result ORDER BY marks_obtained DESC;
+
+-- 26️.Exams ordered by date
+SELECT *FROM examschdeule ORDER BY exam_date;
+
+-- 27️.Students ordered by city then name
+SELECT *FROM student ORDER BY city;
+
+-- 28️.Hard questions ordered by marks DESC
+SELECT *FROM question WHERE difficulty_level='Hard' ORDER BY marks DESC;
+
+-- 29️.Passed results ordered by marks
+SELECT *FROM result WHERE res_status='Pass' ORDER BY marks_obtained;
+
+-- 30️.Subjects containing 'Science' ordered
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
