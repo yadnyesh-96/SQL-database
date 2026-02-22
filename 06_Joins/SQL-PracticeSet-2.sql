@@ -221,8 +221,16 @@ SELECT s.sub_Name,q.que_text FROM subject s
         JOIN question q ON sq.que_Id=q.que_Id;
 
 -- 35️.Left join students and results
+SELECT s.std_Name,s.email,s.gender,s.city,r.res_status 
+	FROM student s 
+    LEFT JOIN result r 
+    ON r.std_Id=s.std_Id;
 
-
+-- 36️.Right join results and student
+SELECT r.res_status,s.std_Name,s.email,s.gender,s.city 
+	FROM result r 
+    RIGHT JOIN student s 
+    ON s.std_Id=r.std_Id;
 
 SELECT * FROM student;
 SELECT * FROM subject;
