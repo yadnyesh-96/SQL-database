@@ -324,6 +324,39 @@ SELECT s.std_Id,sb.sub_Id,r.marks_Obtained
     JOIN subject sb 
     ON sb.sub_Id=e.sub_Id 
     WHERE r.marks_Obtained>70;
+    
+-- 50. Count of Exams Given by Each Student
+SELECT s.std_Id,count(e.exam_Id)
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id 
+    GROUP BY s.std_Id;
+
+
+-- 51.Average Marks Per Subject
+SELECT 
+	s.sub_Id AS SubjectID,
+    s.sub_Name AS SubjectName,
+    avg(r.marks_Obtained) AS AverageMarks
+	FROM subject s
+    JOIN ExamSchdeule e
+    ON s.sub_Id=e.sub_Id
+    JOIN result r
+    ON r.exam_Id=e.exam_Id 
+    GROUP BY s.sub_Id;
+
+-- 5️2. Subjects With More Than 3 Students Appeared
+SELECT sb.sub_Id, sb.sub_Name, COUNT(DISTINCT r.std_Id) AS student_count
+	FROM subject sb
+	JOIN ExamSchdeule e ON sb.sub_Id = e.sub_Id
+	JOIN result r ON e.exam_Id = r.exam_Id
+	GROUP BY sb.sub_Id, sb.sub_Name
+	HAVING COUNT(DISTINCT r.std_Id) > 3;
+
+
+-- 53. Student Exam Details Between Two Dates
 
 
 SELECT * FROM student;
