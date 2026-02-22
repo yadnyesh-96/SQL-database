@@ -255,6 +255,50 @@ SELECT s.sub_Name, count(e.exam_Id)
     INNER JOIN subject s ON s.sub_Id=e.sub_Id 
     GROUP BY s.sub_Name;
 
+-- 41.Average marks per student
+SELECT s.std_Name, avg(r.marks_Obtained)AS Average_Marks 
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    GROUP BY s.std_Name;
+    
+-- 42.Students with avg marks > 60
+SELECT s.std_Name, avg(r.marks_Obtained) 
+	FROM student s 
+    JOIN result r
+    ON s.std_Id=r.std_Id
+    GROUP BY s.std_Name HAVING avg(r.marks_Obtained)>60 ;
+
+-- 43.Count questions per subject
+SELECT sq.sub_Id,count(q.que_Id) 
+	FROM question q 
+    JOIN subjectquestion sq 
+    ON sq.que_Id=q.que_Id 
+    GROUP BY sq.sub_Id; 
+
+-- 44.Subjects having more than 5 questions
+SELECT sq.sub_Id,count(q.que_Id)
+	FROM question q
+    join subjectquestion sq
+    ON sq.que_Id=q.que_Id
+    GROUP BY sq.sub_Id;
+
+-- 45. Total marks obtained per exam
+SELECT s.std_Id,s.std_Name,s.email,s.gender,s.city, sum(r.marks_Obtained) 
+	FROM student s
+	JOIN result r
+    ON r.std_Id=s.std_Id
+    GROUP BY s.std_Id;
+
+-- 46. Exams where total marks > 200
+SELECT e.exam_Id,sum(r.marks_Obtained)
+	FROM examschdeule e 
+	JOIN result r 
+    ON r.exam_Id=e.exam_Id GROUP BY e.exam_Id HAVING sum(r.marks_Obtained)>200;
+
+-- 47. Count pass and fail
+SELECT ;
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
