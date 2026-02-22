@@ -235,7 +235,26 @@ SELECT r.res_status,s.std_Name,s.email,s.gender,s.city
 -- 37️.Students who passed with subject name
 SELECT s.std_Name,ss.sub_Name,r.res_status FROM student s 
 	JOIN result r ON s.std_Id=r.std_Id
-    JOIN examschdeule e ON e.exam_Id=r.exam_Id;
+    JOIN examschdeule e ON e.exam_Id=r.exam_Id
+    JOIN subject ss ON e.sub_Id=ss.sub_Id
+    WHERE r.res_status='Pass';
+
+-- 38.Count students by city
+SELECT city, count(std_Id) 
+	FROM student 
+    GROUP BY city;
+
+-- 39.Count students by gender
+SELECT gender, count(std_Id) 
+	FROM student 
+    GROUP BY gender;
+ 
+-- 40.Total exams per subject
+SELECT s.sub_Name, count(e.exam_Id) 
+	FROM ExamSchdeule e 
+    INNER JOIN subject s ON s.sub_Id=e.sub_Id 
+    GROUP BY s.sub_Name;
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
