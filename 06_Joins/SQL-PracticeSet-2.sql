@@ -297,7 +297,25 @@ SELECT e.exam_Id,sum(r.marks_Obtained)
     ON r.exam_Id=e.exam_Id GROUP BY e.exam_Id HAVING sum(r.marks_Obtained)>200;
 
 -- 47. Count pass and fail
-SELECT ;
+SELECT count(s.std_Id),r.res_status 
+	FROM student s 
+    JOIN result r 
+    ON s.std_Id = r.std_Id
+    GROUP BY r.res_status;
+
+-- 48.Student Name, Subject Name, Exam Date, Marks
+SELECT s.std_Id,s.std_Name,sb.sub_Name,e.exam_date,r.marks_Obtained
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN examschdeule e
+    ON e.exam_Id=r.exam_Id
+    JOIN subject sb
+    ON sb.sub_Id=e.sub_Id;
+
+
+-- 9.Students Who Scored More Than 70
+
 
 
 SELECT * FROM student;
