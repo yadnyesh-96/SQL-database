@@ -487,7 +487,17 @@ SELECT s.std_Id,s.std_Name,sb.sub_Id,sb.sub_Name
     ON sb.sub_Id=e.sub_Id
     WHERE sb.sub_Name LIKE '%Math%';
     
--- 
+-- 68.Count Students By Gender In Exams
+SELECT s.gender,count(DISTINCT s.std_Id) AS gender,e.exam_Id
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    GROUP BY s.gender,e.exam_Id;
+    
+-- 69. Students Who Appeared in 2025 Exams
+
 
 SELECT * FROM student;
 SELECT * FROM subject;
