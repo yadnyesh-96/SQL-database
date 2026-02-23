@@ -421,6 +421,27 @@ SELECT s.sub_Name,count(q.que_Id)
     ON q.que_Id=sq.que_Id
     GROUP BY s.sub_Name;
 
+-- 61.Students Appeared in More Than 2 Exams
+SELECT s.std_Id,count(e.exam_Id)
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    GROUP BY s.std_Id 
+    HAVING count(e.exam_Id)>=2;
+
+-- 62. Average Marks Greater Than 60
+SELECT s.std_Id,avg(sb.total_Marks)
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    JOIN subject sb
+    ON sb.sub_Id=e.sub_Id
+    GROUP BY s.std_Id
+    HAVING avg(sb.total_Marks)>60;
 
 SELECT * FROM student;
 SELECT * FROM subject;
