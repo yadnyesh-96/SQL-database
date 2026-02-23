@@ -551,7 +551,7 @@ SELECT s.std_Id,r.marks_Obtained
     WHERE r.marks_Obtained BETWEEN 50 AND 80;
 
 -- 78.Full Report (Student + Subject + Questions Count + Marks)
-SELECT s.std_Name,sb.sub_Name,count(q.que_Id),r.marks_Obtained
+SELECT s.std_Id,s.std_Name,sb.sub_Id,sb.sub_Name,count(q.que_Id),r.marks_Obtained
 	FROM student s 
     JOIN result r 
     ON r.std_Id=s.std_Id
@@ -563,7 +563,7 @@ SELECT s.std_Name,sb.sub_Name,count(q.que_Id),r.marks_Obtained
     ON sb.sub_Id=sq.sub_Id
     JOIN question q
     ON q.que_Id=sq.que_Id
-    GROUP BY s.std_Name,sb.sub_Name,r.marks_Obtained;
+    GROUP BY s.std_Id,s.std_Name,sb.sub_Id,sb.sub_Name,r.marks_Obtained;
 
 
 
