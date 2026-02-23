@@ -523,7 +523,8 @@ SELECT s.std_Id,count(e.exam_Id),r.res_status
 SELECT s.std_Id,r.marks_Obtained
 	FROM student s 
     JOIN result r
-    ON r.std_Id=s.std_Id;
+    ON r.std_Id=s.std_Id
+    ORDER BY r.marks_Obtained DESC;
 
 SELECT * FROM student;
 SELECT * FROM subject;
