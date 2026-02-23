@@ -526,6 +526,47 @@ SELECT s.std_Id,r.marks_Obtained
     ON r.std_Id=s.std_Id
     ORDER BY r.marks_Obtained DESC;
 
+-- 73.Subjects With Exam Duration > 90
+SELECT s.sub_Id,e.exam_Id,e.duration_min
+	FROM subject s 
+    JOIN ExamSchdeule e 
+    ON e.sub_Id=s.sub_Id
+    WHERE e.duration_min>90;
+
+-- 74. Students From Chicago Who Passed
+SELECT s.std_Id,s.city,r.res_status
+	FROM student s 
+    JOIN result r
+    ON r.std_Id=s.std_Id
+	WHERE s.city='Chicago' AND r.res_status='Pass';
+
+-- 75 Total Questions By Difficult
+SELECT difficulty_level, count(*) FROM question GROUP BY difficulty_level;
+
+-- 76 Students With Marks Between 50 and 80
+SELECT s.std_Id,r.marks_Obtained
+	FROM student s 
+    JOIN result r
+    ON r.std_Id = s.std_Id 
+    WHERE r.marks_Obtained BETWEEN 50 AND 80;
+
+-- 78.Full Report (Student + Subject + Questions Count + Marks)
+SELECT s.std_Name,sb.sub_Name,count(q.que_Id),r.marks_Obtained
+	FROM student s 
+    JOIN result r 
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    JOIN subject sb
+    ON sb.sub_Id=e.sub_Id
+    JOIN SubjectQuestion sq
+    ON sb.sub_Id=sq.sub_Id
+    JOIN question q
+    ON q.que_Id=sq.que_Id
+    GROUP BY s.std_Name,sb.sub_Name,r.marks_Obtained;
+
+
+
 SELECT * FROM student;
 SELECT * FROM subject;
 SELECT * FROM ExamSchdeule;
