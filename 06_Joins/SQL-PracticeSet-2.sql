@@ -452,6 +452,18 @@ SELECT q.que_Id,q.que_text,s.sub_Id,s.sub_Name,q.difficulty_level
     ON s.sub_Id=sq.sub_Id
     WHERE q.difficulty_level='Easy';
 
+-- 64. Students and Total Exams Per Subject
+SELECT s.std_Id,s.std_Name,e.exam_Id,sb.sub_Id,sb.sub_Name
+	FROM student s 
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e 
+    ON e.exam_Id = r.exam_Id
+    JOIN subject sb
+    ON sb.sub_Id=e.sub_Id;
+
+-- 65. Highest Marks Per Exam
+
 
 
 SELECT * FROM student;
