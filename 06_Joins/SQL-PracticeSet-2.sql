@@ -468,7 +468,13 @@ FROM result
 GROUP BY exam_Id;
     
 -- 66 Lowest Marks Per Subject
-SELECT sub_Id,sub_Name,min(total_Marks) FROM subject GROUP BY sub_Id;
+SELECT s.sub_Id,s.sub_Name,min(r.marks_Obtained)
+	FROM subject s
+    JOIN ExamSchdeule e
+    ON e.sub_Id=s.sub_Id
+    JOIN result r
+    ON r.exam_Id=e.exam_Id
+    GROUP BY s.sub_Id,s.sub_Name;
 
 
 SELECT * FROM student;
