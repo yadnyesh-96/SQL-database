@@ -204,10 +204,18 @@ SELECT *FROM result WHERE res_status='Pass' ORDER BY marks_obtained;
 SELECT *FROM subject WHERE sub_Name LIKE '%Science%' ORDER BY sub_Name ASC;
 
 -- 31️.Student with their exam results
-SELECT s.std_Name,s.email,s.gender,s.city,s.reg_Date,r.res_status AS Result FROM result r INNER JOIN student s ON r.std_Id=s.std_Id;
+SELECT s.std_Name,s.email,s.gender,s.city,s.reg_Date,r.res_status AS Result 
+		FROM result r 
+        INNER JOIN student s 
+        ON r.std_Id=s.std_Id;
 
 -- 32️.Student with exam date
-SELECT e.exam_date,s.std_Id,s.std_Name FROM examschdeule e INNER JOIN result r ON r.exam_Id=e.exam_Id INNER JOIN student s ON s.std_Id=r.std_Id;
+SELECT e.exam_date,s.std_Id,s.std_Name 
+		FROM examschdeule e 
+        INNER JOIN result r 
+        ON r.exam_Id=e.exam_Id 
+        INNER JOIN student s 
+        ON s.std_Id=r.std_Id;
 
 -- 33️.Student with subject name
 SELECT s.sub_Name,s1.std_Name FROM student s1 
@@ -381,6 +389,28 @@ SELECT s.sub_Id,s.sub_Name,count(q.que_Id)
     ON sq.que_Id=q.que_Id
     WHERE q.difficulty_level='Hard'
     GROUP BY s.sub_Id;
+
+-- 57. Students Who Failed
+SELECT s.std_Id,s.std_Name,r.res_status
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    WHERE r.res_status='Fail';
+
+-- 58. Exam Duration With Subject
+SELECT s.sub_Name,e.duration_min
+	FROM subject s 
+    JOIN ExamSchdeule e
+    ON e.sub_Id=s.sub_Id;
+    
+-- 59. Students From New York Appeared in Exams
+SELECT s.std_Id,s.city,e.exam_Id
+	FROM student s
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    WHERE s.city='New York';
 
 SELECT * FROM student;
 SELECT * FROM subject;
