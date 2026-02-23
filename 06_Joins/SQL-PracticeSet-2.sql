@@ -497,7 +497,33 @@ SELECT s.gender,count(DISTINCT s.std_Id) AS gender,e.exam_Id
     GROUP BY s.gender,e.exam_Id;
     
 -- 69. Students Who Appeared in 2025 Exams
+SELECT s.std_Id,e.exam_Id
+	FROM student s 
+    JOIN result r 
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    WHERE YEAR(e.exam_date) = '2025';
+--  WHERE e.exam_date BETWEEN '2025-01-01' AND '2025-12-31';
 
+-- 70. Total Marks Per Subject
+SELECT sub_Name,total_Marks FROM subject;
+
+-- 71. Students Who Passed More Than 1 Exam
+SELECT s.std_Id,count(e.exam_Id),r.res_status
+	FROM student s 
+    JOIN result r
+    ON r.std_Id=s.std_Id
+    JOIN ExamSchdeule e
+    ON e.exam_Id=r.exam_Id
+    GROUP BY s.std_Id,r.res_status
+    HAVING count(e.exam_Id)>1 AND r.res_status='Pass';
+
+-- 72. Students Ordered By Total Marks Desc
+SELECT s.std_Id,r.marks_Obtained
+	FROM student s 
+    JOIN result r
+    ON r.std_Id=s.std_Id;
 
 SELECT * FROM student;
 SELECT * FROM subject;
