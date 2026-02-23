@@ -546,8 +546,7 @@ SELECT difficulty_level, count(*) FROM question GROUP BY difficulty_level;
 -- 76 Students With Marks Between 50 and 80
 SELECT s.std_Id,r.marks_Obtained
 	FROM student s 
-    JOIN result r
-    ON r.std_Id = s.std_Id 
+    JOIN result r ON r.std_Id = s.std_Id 
     WHERE r.marks_Obtained BETWEEN 50 AND 80;
 
 -- 78.Full Report (Student + Subject + Questions Count + Marks)
