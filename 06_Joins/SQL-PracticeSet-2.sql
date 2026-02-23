@@ -463,6 +463,11 @@ SELECT s.std_Id,s.std_Name,e.exam_Id,sb.sub_Id,sb.sub_Name
     ON sb.sub_Id=e.sub_Id;
 
 -- 65. Highest Marks Per Exam
+SELECT exam_Id, MAX(marks_Obtained) AS highest_marks
+FROM result
+GROUP BY exam_Id;
+    
+-- 66 Lowest Marks Per Subject
 
 
 
