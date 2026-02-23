@@ -412,6 +412,16 @@ SELECT s.std_Id,s.city,e.exam_Id
     ON e.exam_Id=r.exam_Id
     WHERE s.city='New York';
 
+-- 60. Count Questions Per Subject
+SELECT s.sub_Name,count(q.que_Id)
+	FROM subject s
+    JOIN SubjectQuestion sq
+    ON s.sub_Id=sq.sub_Id
+    JOIN question q
+    ON q.que_Id=sq.que_Id
+    GROUP BY s.sub_Name;
+
+
 SELECT * FROM student;
 SELECT * FROM subject;
 SELECT * FROM ExamSchdeule;
