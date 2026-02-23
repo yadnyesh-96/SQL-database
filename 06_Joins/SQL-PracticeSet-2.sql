@@ -555,8 +555,7 @@ SELECT s.std_Id,s.std_Name,sb.sub_Id,sb.sub_Name,count(q.que_Id),r.marks_Obtaine
 	FROM student s 
     JOIN result r ON r.std_Id=s.std_Id
     JOIN ExamSchdeule e ON e.exam_Id=r.exam_Id
-    JOIN subject sb
-    ON sb.sub_Id=e.sub_Id
+    JOIN subject sb ON sb.sub_Id=e.sub_Id
     JOIN SubjectQuestion sq
     ON sb.sub_Id=sq.sub_Id
     JOIN question q
