@@ -443,6 +443,17 @@ SELECT s.std_Id,avg(sb.total_Marks)
     GROUP BY s.std_Id
     HAVING avg(sb.total_Marks)>60;
 
+-- 63. Easy Questions With Subject
+SELECT q.que_Id,q.que_text,s.sub_Id,s.sub_Name,q.difficulty_level
+	FROM question q
+    JOIN SubjectQuestion sq
+    ON sq.que_Id=q.que_Id
+    JOIN subject s 
+    ON s.sub_Id=sq.sub_Id
+    WHERE q.difficulty_level='Easy';
+
+
+
 SELECT * FROM student;
 SELECT * FROM subject;
 SELECT * FROM ExamSchdeule;
