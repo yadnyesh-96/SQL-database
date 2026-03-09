@@ -35,3 +35,22 @@ pId INT(5), FOREIGN KEY (pId) REFERENCES project(pId)
 );
 
 ```
+
+## Write a SQL Query to find the second highest salary of employee
+```
+SELECT *FROM employee WHERE MAX(salary);
+```
+
+## **Co-related SubQuery :** <br>
+
+when we use the outer query reference in inner query called as co-related subqueries  and normally we use the co-related sub-query using exits operator.
+
+**Syntaxt for EXIT operator :** select outerquery tablename ref exits (inner query outertable ref);
+
+- **Example**: Write SQL Query to find employee who at least work on single project 
+```
+SELECT *FROM employee e WHERE EXISTS (SELECT pId FROM project p WHERE p.pId=e.pId);
+```
+
+### What is the difference Between **IN** and **EXISTS** operator ?
+1. If we use the **IN** operator then SQL engine typically evalutes all values in the list or sub query use the result subquery for comparison and exitst operator compare outer query result with inner query and if find match return ture and stops the execution and if find not match then return false.

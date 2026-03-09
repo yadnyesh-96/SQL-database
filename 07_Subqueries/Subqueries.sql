@@ -38,9 +38,31 @@ INSERT INTO employee (eId, eName, salary, pId) VALUES
 (507, 'Vikram Singh', 51000, 106);
 
 
+SELECT MAX(salary) FROM employee;
+
 -- WA SQL Query to find the second highest salary of employee
+SELECT MAX(salary) FROM employee WHERE salary < (SELECT MAX(salary) FROM employee);
+
+-- Example: create table name as register and save registration date 
+CREATE TABLE register(
+rId INT(5) PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(200),
+rDate DATE
+);
+
+INSERT INTO register 
+VALUES 
+(0,'Ramesh',(SELECT CURDATE()));
+
+-- (SELECT CURDATE()) Is inner query 
+
+--  find the employee who is working on at least project
+SELECT *FROM employee WHERE pId IN (SELECT pId FROM project);
 
 
+-- CO-RELATED SUBQUERY 
+-- Example: WA SQL Query to find employee who at least work on single project 
+SELECT *FROM employee e WHERE EXISTS (SELECT pId FROM project p WHERE p.pId=e.pId);
 
 
 SELECT *FROM project;
