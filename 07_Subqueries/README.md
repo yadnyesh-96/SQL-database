@@ -41,3 +41,4 @@ DROP VIEW empName;
 ```
 CREATE OR REPLACE VIEW empview AS SELECT empId,empName FROM employee;
 ```
+
