@@ -6,3 +6,9 @@
 ---
 - A. **To Provide table data Security** : Means we do not provide complete table access just we provide particular column access to the table using view.
 - B. **To hide the complex queries** : Means if we have some joins or some subqueries then we can hide them in view so the end user or developer does not need to write complex query just execute view then internally complex query get executed.
+
+### How to create view 
+**Syntax :** create view viewname as select query;
+```
+CREATE VIEW empView AS SELECT empId,empName FROM employee;
+```
