@@ -65,7 +65,8 @@ SELECT *FROM employee
 
 -- Write a query to display employees who work in the department named 'HR'.
 SELECT *FROM employee 
-WHERE deptId IN (SELECT deptId FROM Department WHERE deptName='HR');
+WHERE deptId IN (SELECT deptId 
+FROM Department WHERE deptName='HR');
 
 -- Find employees whose salary is greater than the minimum salary in the Employee table.
 SELECT *FROM employee WHERE salary > (SELECT MIN(salary) FROM employee);
