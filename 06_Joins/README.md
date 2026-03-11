@@ -12,7 +12,7 @@
   - 5. `Self join`
   - 6. `Cartesian project join`
   ---
- 
+  
 > ### 1. **Inner join**
 
 - **Inner join** is used for fetch data from common data between tables those are interconnected with each other.
