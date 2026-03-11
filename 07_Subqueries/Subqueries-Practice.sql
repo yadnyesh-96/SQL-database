@@ -67,7 +67,14 @@ SELECT *FROM employee
 SELECT *FROM employee 
 WHERE deptId IN (SELECT deptId FROM Department WHERE deptName='HR');
 
+-- Find employees whose salary is greater than the minimum salary in the Employee table.
+SELECT *FROM employee WHERE salary > (SELECT MIN(salary) FROM employee);
 
+-- Display employees whose department location is 'Mumbai'.
+SELECT *FROM employee WHERE deptId IN (SELECT deptId FROM Department WHERE location = 'Mumbai');
+
+-- Find employees who are working on any project.
+SELECT *FROM employee WHERE empId IN (SELECT empId FROM Project);
 
 SELECT *FROM employee;
 SELECT *FROM department;
