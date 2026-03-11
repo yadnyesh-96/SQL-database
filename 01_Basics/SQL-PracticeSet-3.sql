@@ -157,18 +157,24 @@ SELECT department, count(emp_id) FROM employee GROUP BY department;
 SELECT department, count(emp_id) FROM employee GROUP BY department HAVING count(emp_id)>=2;
 
 --  SQL query to display the maximum salary department-wise.
-SELECT department, max(salary) FROM employee GROUP BY department;
+SELECT department, max(salary) 
+FROM employee GROUP BY department;
 
 -- SQL query to display departments where the minimum salary is greater than 30000.
-SELECT department, min(salary) FROM employee GROUP BY department HAVING min(salary)>30000;
+SELECT department, min(salary) 
+FROM employee GROUP BY department HAVING min(salary)>30000;
 
 -- SQL query to display employees whose name contains exactly 4 characters.
-SELECT *FROM employee WHERE emp_name LIKE '_ _ _ _%';
+SELECT *FROM employee 
+WHERE emp_name LIKE '_ _ _ _%';
 
 -- SQL query to display employees whose name ends with a vowel.
-SELECT *FROM employee WHERE emp_name OR emp_name LIKE '%e'  OR emp_name LIKE '%i'   OR emp_name LIKE '%o'   OR emp_name LIKE '%u';
+SELECT *FROM employee 
+WHERE emp_name OR emp_name LIKE '%e'  OR emp_name LIKE '%i'   OR emp_name LIKE '%o'   OR emp_name LIKE '%u';
 
 -- SQL query to display employees ordered first by department ascending and then by salary descending.
+
+
 SELECT *FROM employee ORDER BY emp_name ASC;
 SELECT *FROM employee ORDER BY salary DESC;
 
