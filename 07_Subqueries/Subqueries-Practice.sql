@@ -60,9 +60,13 @@ INSERT INTO Project (pId, pName, empId, budget) VALUES
 
 
 -- Write a query to find employees whose salary is greater than the average salary of all employees.
-SELECT *FROM employee WHERE salary > (SELECT AVG(salary) FROM employee );
+SELECT *FROM employee
+ WHERE salary > (SELECT AVG(salary) FROM employee );
 
 -- Write a query to display employees who work in the department named 'HR'.
+SELECT *FROM employee 
+WHERE deptId IN (SELECT deptId FROM Department WHERE deptName='HR');
+
 
 
 SELECT *FROM employee;
