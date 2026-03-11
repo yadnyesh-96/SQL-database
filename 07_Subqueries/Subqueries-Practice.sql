@@ -21,3 +21,50 @@ pName VARCHAR(200),
 empId INT(5), FOREIGN KEY (empId) REFERENCES employee(empId),
 budget INT(5)
 );
+
+INSERT INTO Department (deptId, deptName, location) VALUES
+(1, 'HR', 'Mumbai'),
+(2, 'IT', 'Pune'),
+(3, 'Sales', 'Mumbai'),
+(4, 'Finance', 'Delhi'),
+(5, 'Marketing', 'Pune'),
+(6, 'Support', 'Bangalore');
+
+INSERT INTO Employee (empId, empName, deptId, salary, join_year) VALUES
+(1, 'Rahul', 2, 70000, 2019),
+(2, 'Amit', 1, 50000, 2020),
+(3, 'Priya', 3, 60000, 2018),
+(4, 'Sneha', 2, 80000, 2021),
+(5, 'Vikas', 4, 55000, 2017),
+(6, 'Anita', 3, 45000, 2022),
+(7, 'Rohan', 5, 72000, 2019),
+(8, 'Kiran', 1, 65000, 2023),
+(9, 'Neha', 2, 90000, 2020),
+(10, 'Sanjay', 3, 40000, 2016),
+(11, 'Meena', 4, 75000, 2022),
+(12, 'Arjun', 5, 48000, 2021),
+(13, 'Pooja', 2, 85000, 2023),
+(14, 'Nikhil', 6, 52000, 2019);
+
+
+INSERT INTO Project (pId, pName, empId, budget) VALUES
+(101, 'AI System', 4, 120000),
+(102, 'HR Portal', 2, 40000),
+(103, 'Sales Tracker', 3, 70000),
+(104, 'Finance App', 5, 90000),
+(105, 'Marketing Tool', 7, 60000),
+(106, 'IT Security', 9, 150000),
+(107, 'Support Desk', 14, 30000),
+(108, 'Mobile App', 1, 80000),
+(109, 'Data Analytics', 13, 110000);
+
+
+-- Write a query to find employees whose salary is greater than the average salary of all employees.
+SELECT *FROM employee WHERE salary > (SELECT AVG(salary) FROM employee );
+
+-- Write a query to display employees who work in the department named 'HR'.
+
+
+SELECT *FROM employee;
+SELECT *FROM department;
+SELECT *FROM Project;
