@@ -76,6 +76,9 @@ SELECT *FROM employee WHERE deptId IN (SELECT deptId FROM Department WHERE locat
 -- Find employees who are working on any project.
 SELECT *FROM employee WHERE empId IN (SELECT empId FROM Project);
 
+-- Display employees whose salary is equal to the maximum salary in the Employee table.
+SELECT *FROM employee WHERE salary = (SELECT MAX(salary) FROM Project);
+
 SELECT *FROM employee;
 SELECT *FROM department;
 SELECT *FROM Project;
