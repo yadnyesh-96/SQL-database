@@ -91,3 +91,35 @@
     **Example** : Write a Query to find duplicate fees from student table.
     ![alt text](image-30.png)
 ---
+- ### 6. **having** :
+    Arrange the table data in ascending or descending order.<br>
+    **Syntax** : select *from tablename by columnname desc | asc 
+    ```
+    select *from student desc;
+    ```
+---
+
+- ### 7. **Like operator** :
+    Like operator is used for pattern matching operator or write pattern query normally it is used for searching purpose. Means we have some search pattern then we have use the like as operator.<br>
+    **Example** : Suppose consider we have the student table and we want to find student whose name start with r ot ends with sh or name contains at least three letters etc.,<br>
+    **Syntax** : select *from student where columnname like pattern; <br>
+    *If we want to work with like operator we have some wild card characters given below : <br>
+    - `%` : this operator indicate zero or more character.
+    - `_` : this pattern represents single characters.
+    ![alt text](image-31.png)
+    ![alt text](image-32.png)
+    ![alt text](image-33.png)
+    ![alt text](image-34.png)
+    ![alt text](image-35.png)
+---
+
+### 🔢 What is the correct sequence of when all clauses are used in a single query?
+
+**1. Where**  
+**2. Like**
+**3. Group by**   
+**4. Having**  
+**5. order by** 
+
+```
+select std_fees count(std_fees) from student where std_fees>5000 and std_name like 'r%' group by std_fees having count(std_fees)>1 order by count(std_fees) desc;
