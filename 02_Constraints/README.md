@@ -101,7 +101,7 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 
 ---
 
-### 5. **Check constraints** :
+### 8. **Check constraints** :
 - This constraints is used for apply condition with column at the time of table creation.
 - **Syntax** : create table tablename(columnname datatype(size) check (condition),...);
 - **Example** : Suppose consider we are working on voting application and we want to create table for vote but the rule is if voter age is below 18 then record of voter should not accept by database.
