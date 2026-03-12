@@ -23,3 +23,20 @@
         3.Write a Query to fetch student whose id is not 2.
         ![alt text](image-24.png)
 ---
+- ### `IN`, `Between` : 
+    **`IN` Operator** : IN operator is alternative for multiple OR condition means when we use more than one OR condition with single column in query then we use IN operator as well as IN Operator is used for write subquerry.<br>
+    **Syntax** : select *from tablename where columnname IN(value1,value2,value...n);<br>
+    **Example** : Write a Query to fetch student whose fees is (3005.3025,5000)
+    ```
+    select *from student where std_fees IN(3005,3025,5000);
+    ``` 
+    ![alt text](image-25.png)
+    ---
+    **`Between` Operator** : Between Operator is used to fetch data betweeen range of specified value such as >= and <=. <br>
+    **Syntax** : select *from tavlename where columnbame between begval and targetvalue; <br>
+    **Example** : Write a Query to fetch student data whose salary in range between 4000 to 5000.
+    ```
+    select *from student where std_fees between 4000 and 5000;
+    ```
+    ![alt text](image-26.png)
+---
