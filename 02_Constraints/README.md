@@ -61,7 +61,7 @@ create table employee(eid int(5) primary key, name varchar(200) not null, email 
 These constraints only work with foreign key constraints.
 ---
 
->### **1. ON DELETE CASCADE** <br>
+>### **5. ON DELETE CASCADE** <br>
 
 - This constraints help us to delete the child record automatically when parent record get deleted.
 
