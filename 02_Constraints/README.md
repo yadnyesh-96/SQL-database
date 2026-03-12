@@ -83,7 +83,7 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 ![alt text](image-9.png)
 
 ---
->### **2. ON UPDATE CASCADE** <br>
+>### **6. ON UPDATE CASCADE** <br>
 
 -  When we update primary key then child record update automatically.
 
