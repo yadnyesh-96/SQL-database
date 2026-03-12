@@ -130,7 +130,7 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 
 ---
 
-### 6. **AUTO_INCREMENT constraints** :
+### 10. **AUTO_INCREMENT constraints** :
 - AUTO_INCREMENT constraints is used for increased primary key or unique key value autmatically.
 - **Syntax** :  CREATE TABLE tableName(columnName datatype(size)PRIMARY KEY AUTO_INCREMENT...);
 - **Logic** (Behind) `SELECT MAX(COL)+1 FROM tableName;`
