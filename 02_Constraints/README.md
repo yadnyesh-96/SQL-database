@@ -90,7 +90,7 @@ create table employee(empId INT(5)PRIMARY KEY AUTO_INCREMENT,empName VARCHAR(200
 ![alt text](image-10.png)
 
 
->### **3. on delete set null** <br>
+>### **7. on delete set null** <br>
 
 - These constraints on delete set null means when we delete the parent record then child record set null automatically in foreign key column so we can use on delete set null constraint with foreign key.<br>
    - a.  On delte cascade and on delete cascade can use at a time.
