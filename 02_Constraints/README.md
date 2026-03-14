@@ -64,7 +64,7 @@ These constraints only work with foreign key constraints.
 >### **5. ON DELETE CASCADE** <br>
 
 - This constraints help us to delete the child record automatically when parent record get deleted.
-
+ 
 ```
 --table -1 
 
