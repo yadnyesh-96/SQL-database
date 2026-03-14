@@ -7,7 +7,7 @@ deptName VARCHAR(200),
 location VARCHAR(200) 
 );
 
-CREATE TABLE employee(
+CREATE TABLE Employee(
 empId INT(5) PRIMARY KEY, 
 empName VARCHAR(200),
 deptId INT(5), FOREIGN KEY (deptId) REFERENCES department(deptId),
@@ -85,7 +85,17 @@ WHERE empId IN (SELECT empId FROM Project);
 SELECT *FROM employee WHERE 
 salary = (SELECT MAX(salary) FROM Project);
 
+-- Find employees who joined in the same year as employee with emp_id = 3.
+SELECT * FROM Employee 
+WHERE join_year = (SELECT join_year FROM Employee WHERE empId=3);
 
-SELECT *FROM employee;
+-- Display employees whose salary is greater than the salary of employee 'Rahul'.
+SELECT *FROM Employee WHERE salary > (SELECT salary FROM Employee WHERE empName='Rahul'); 
+
+-- Find employees whose department id exists in the Department table.
+SELECT *FROM Employee WHERE deptId = (SELECT deptId FROM Department );
+
+
+SELECT *FROM Employee;
 SELECT *FROM department;
 SELECT *FROM Project;
