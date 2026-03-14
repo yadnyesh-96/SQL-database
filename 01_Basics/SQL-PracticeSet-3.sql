@@ -175,8 +175,6 @@ WHERE emp_name OR emp_name LIKE '%e'
  OR emp_name LIKE '%o'   
  OR emp_name LIKE '%u';
 
--- SQL query to display employees ordered first by department ascending and then by salary descending.
-SELECT 
 
 SELECT *FROM employee ORDER BY emp_name ASC;
 SELECT *FROM employee ORDER BY salary DESC;
