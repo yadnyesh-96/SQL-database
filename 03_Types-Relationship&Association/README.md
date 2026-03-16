@@ -16,5 +16,24 @@
 - So it is indirectly one to one association.
 
 ```
+CREATE TABLE USERS (
+    userID INT(5)PRIMARY KEY AUTO_INCREMENT, userName VARCHAR(200))
+    ;
 
+CREATE TABLE LOGINS(
+    loginID INT(5)PRIMARY KEY,
+    loignDATE DATE,userID INT(5),
+    FOREIGN KEY(userID)
+    REFERENCES USERS(userID)
+    );
+
+INSERT INTO USERS
+VALUES
+(1,'Ram'),
+(2,'Shyam'),
+(3,'Ganesh');
+
+INSERT INTO LOGINS
+VALUES
+()
 ```
