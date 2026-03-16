@@ -65,3 +65,4 @@ CREATE TABLE CUSTOMERS(
 **3. MANY TO ONE Association 🔂 :**
 - If we think Opposite of **ONE TO MANY** means single Product can have more than on customers so we can say more than one customers have single product.
 
+**4. MANY TO MANY Association 🔂 :**
