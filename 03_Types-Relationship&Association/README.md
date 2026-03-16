@@ -22,7 +22,8 @@ CREATE TABLE USERS (
 
 CREATE TABLE LOGINS(
     loginID INT(5)PRIMARY KEY,
-    loignDATE DATE,userID INT(5),
+    loignDATE DATE,
+    userID INT(5) UNIQUE,
     FOREIGN KEY(userID)
     REFERENCES USERS(userID)
     );
