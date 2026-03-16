@@ -40,3 +40,24 @@ VALUES
 (12,SYSDATETIME(),2),
 (13,SYSDATETIME(),3);
 ```
+---
+**1. ONE TO MANY Association 🔂 :**
+- **ONE TO MANY Association** Means the single parent record can have more than one child record ir parent record id can appeared more than one in child table called as one to many Association.
+
+**How to implement ONE TO ONE Association Practically:**
+We have **Example :** Single Product can hace Multiple Customers.
+```
+CREATE TABLE PRODUCTS(
+    product_ID INT(5) PRIMARY KEY,
+    productName VARCHAR(200),
+    productDESC VARCHAR(200)
+);
+
+CREATE TABLE CUSTOMERS(
+    cust_ID INT(5) PRIMARY KEY,
+    custName VARCHAR(200),
+    custContact VARCHAR(200),
+    productID INT(5),
+    FOREIGN KEY(productID) REFERENCES PRODUCT(productID)
+);
+```
