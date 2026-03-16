@@ -66,3 +66,6 @@ CREATE TABLE CUSTOMERS(
 - If we think Opposite of **ONE TO MANY** means single Product can have more than on customers so we can say more than one customers have single product.
 
 **4. MANY TO MANY Association 🔂 :**
+- **MANY TO MANY Association** means _Table-A_ record can appear more than onw with _Table-B_ and _Table-B_ record can appear more than one with _Table-A_ called as MANY TO MANY Association.
+- ONE TO ONE + MANY TO ONE = MANY TO MANY
+- IF we want to implement practically in Relational Database Management System (RDBMS) we have to create on implementer table which contains the only foreign keys.
