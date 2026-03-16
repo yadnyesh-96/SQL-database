@@ -1,0 +1,1 @@
+## **Types of relationship or association  in table** 🏛️<br>(**and Practical Implementation using a MYSQL**)
