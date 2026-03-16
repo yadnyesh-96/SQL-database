@@ -9,4 +9,8 @@
 
 **1. ONE TO ONE Association 🔂 :**
 - ONE TO ONE Association means the one Record/row present in _Table-A_ or _Parent Table_ must be present at a **only once** in _child table_ or _Table-B_ .
-- Means we cannot be duplicated data or record row in child table.
+- Means we cannot be duplicated data or record row in child table.<br>
+  
+**How to implement ONE TO ONE Association Practically:**
+- If we want to achive the one to one association practicall we have to create the **Foreign key** with **unique constraints** means foreign key build the relationship between the parent table and unique not allowed dublicated child data.
+- So it is indirectly one to one association.
