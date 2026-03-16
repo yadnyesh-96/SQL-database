@@ -14,3 +14,7 @@
 **How to implement ONE TO ONE Association Practically:**
 - If we want to achive the one to one association practicall we have to create the **Foreign key** with **unique constraints** means foreign key build the relationship between the parent table and unique not allowed dublicated child data.
 - So it is indirectly one to one association.
+
+```
+
+```
