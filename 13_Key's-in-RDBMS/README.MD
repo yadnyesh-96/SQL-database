@@ -6,3 +6,4 @@
 ### **4.Natural Key**
 ### **5.Suurogate Key**
 ### **6.Primary Key**
+### **7.Unique Key**
