@@ -68,4 +68,5 @@ CREATE TABLE CUSTOMERS(
 **4. MANY TO MANY Association 🔂 :**
 - **MANY TO MANY Association** means _Table-A_ record can appear more than onw with _Table-B_ and _Table-B_ record can appear more than one with _Table-A_ called as MANY TO MANY Association.
 - ONE TO ONE + MANY TO ONE = MANY TO MANY
-- IF we want to implement practically in Relational Database Management System (RDBMS) we have to create on implementer table which contains the only foreign keys.
+- IF we want to implement practically in Relational Database Management System (RDBMS) we have to create on implementer table which contains the only foreign keys. 
+- --
