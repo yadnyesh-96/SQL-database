@@ -1,7 +1,7 @@
 ## **Types of Keys in Relational Database Management System (RDBMS) : 🧾**
 
 ### **1.Composite Primary Key :**
-- Composite primary key
+- Composite primary key means 
 ### **2.Candidate Key**
 ### **3.Super Key**
 ### **4.Natural Key**
