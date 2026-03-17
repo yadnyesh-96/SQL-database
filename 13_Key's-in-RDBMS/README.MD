@@ -2,3 +2,6 @@
 
 ### **1.Composite Primary Key**
 ### **2.Candidate Key**
+### **3.Super Key**
+### **4.Natural Key**
+### **5.Suurogate Key**
