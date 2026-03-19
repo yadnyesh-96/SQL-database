@@ -9,6 +9,11 @@
   - b) From these candidate one is selected as the primary key.
   - c) The remaining key's are alternate keys.
   
+### Difference Between *Candidate Key* **&** *Primary Key*
+
+
+
+
 ### **3.Super Key**
 ### **4.Natural Key**
 ### **5.Suurogate Key**
