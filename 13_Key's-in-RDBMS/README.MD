@@ -47,3 +47,4 @@
 - A **Foreign Key** is a column that creates a link between two tables.
 - It refers to the Primary Key of another table to maintain Referential Integrity.
 - It ensures that you cannot add a record to the child table if the corresponding parent record doesn't exist.
+---
