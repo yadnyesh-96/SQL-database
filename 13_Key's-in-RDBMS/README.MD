@@ -29,6 +29,21 @@
 - It has business meaning.
 
 ### **5.Suurogate Key**
+- A **Surrogate Key** is an artificially generated unique identifier (like an Auto_Increment ID or UUID).
+- It has no real-world or business meaning.
+- It remains constant even if business data (like an email or name) changes.
+  
 ### **6.Primary Key**
+- A **Primary Key** is a column (or set of columns) that uniquely identifies each row in a table.
+- It cannot contain NULL values and must be unique.
+- Each table can have only one Primary Key.
+  
 ### **7.Unique Key**
+- A **Unique Key** ensures that all values in a column are different from one another.
+- Unlike a Primary Key, it can accept a NULL value (though usually only one, depending on the SQL dialect).
+- You can have multiple Unique Keys in a single table.
+  
 ### **8.Foreign Key**
+- A **Foreign Key** is a column that creates a link between two tables.
+- It refers to the Primary Key of another table to maintain Referential Integrity.
+- It ensures that you cannot add a record to the child table if the corresponding parent record doesn't exist.
