@@ -4,7 +4,7 @@ USE july2025;
 
 -- display the existing table employee table Data from july2025 database
 SELECT *FROM employee;
- 
+
 -- create view 
 CREATE VIEW empView AS SELECT empId,empName FROM employee;
 
